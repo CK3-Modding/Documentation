@@ -25,6 +25,6 @@ module.exports = {
 		]
 	},
 
-	title: "Crusader Kings 3 - Modding Documentation",
+	title: "Crusader Kings III - Modding Documentation",
 	footer: "[MIT Licensed](https://github.com/CK3-Modding/Documentation/blob/master/LICENSE)"
 }
