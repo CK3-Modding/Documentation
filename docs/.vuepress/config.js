@@ -5,7 +5,6 @@ module.exports = {
 		sidebar: [
 			{
 				title: 'Introduction',
-				path: '/introduction/',
 				children: [
 					'/introduction/project-setup',
 					'/introduction/folder-structure'
