@@ -4,16 +4,16 @@ module.exports = {
 	themeConfig: {
 		sidebar: [
 			{
-				title: 'Introduction',
+				title: 'Fundamentals',
 				children: [
-					'/introduction/project-setup',
-					'/introduction/folder-structure'
+					'/fundamentals/project-setup',
+					'/fundamentals/folder-structure'
 				]
 			},
 			{
 				title: 'Tutorials',
 				children: [
-					'tutorials/basic-alert',
+					'tutorials/basic-decision',
 				]
 			}
 		],
