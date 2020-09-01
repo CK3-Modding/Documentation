@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install Dependencies
-        run: sudo apt-get install -y lftp && yarn install --dev --frozen-lockfile
+        run: sudo apt-get install -y lftp && yarn install --frozen-lockfile --production=true
       - name: Build Site
         run: yarn docs:build
       - name: Deploy
