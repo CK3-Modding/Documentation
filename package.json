@@ -1,6 +1,7 @@
 {
   "name": "docs.ck3modding.com",
   "version": "1.0.0",
+  "license": "MIT",
 
   "repository": "https://github.com/CK3-Modding/Documentation.git",
   "author": "CK3-Modding",
@@ -16,8 +17,6 @@
       "url": "https://glorified.dev/"
     }
   ],
-
-  "license": "MIT",
 
   "dependencies": {
     "vuepress": "^1.5.4"
