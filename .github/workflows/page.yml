@@ -11,9 +11,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Install Dependencies
         run: yarn global add vuepress
-      - name: Setup Path
-        run: export PATH="$(yarn global bin):$PATH"
       - name: Build Site
-        run: vuepress build .
+        run: $(yarn global bin)/vuepress build .
       - name: Take Stock
         run: ls .
