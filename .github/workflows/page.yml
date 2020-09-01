@@ -10,9 +10,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install Dependencies
-        run: sudo apt-get install -y lftp && yarn add vuepress vuepress-auto-sidebar
+        run: sudo apt-get install -y lftp && yarn global add vuepress && yarn add vuepress-auto-sidebar
       - name: Build Site
-        run: vuepress build .
+        run: $(yarn global bin)/vuepress build .
       - name: Deploy
         run: lftp -e "set ssl:verify-certificate false; open $remote_host; user $remote_user $remote_pass; mirror --exclude .htaccess --reverse --delete --recursion=always -vvv .vuepress/dist/ ."
         env:
