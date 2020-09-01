@@ -1,9 +1,6 @@
 name: Page Build
 
-on:
-  push:
-    branch:
-      - master
+on: push
 
 jobs:
   build:
@@ -13,10 +10,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install Dependencies
-        run: sudo apt-get install -y lftp && yarn global add vuepress
+        run: sudo apt-get install -y lftp && yarn install --frozen-lockfile --production=true
       - name: Build Site
-        run: $(yarn global bin)/vuepress build docs
+        run: yarn docs:build
       - name: Deploy
+        if: github.ref == 'refs/heads/master'
         run: lftp -e "set ssl:verify-certificate false; open $remote_host; user $remote_user $remote_pass; mirror --exclude .htaccess --reverse --delete --recursion=always -vvv docs/.vuepress/dist/ ."
         env:
           remote_host: ${{ secrets.DOCS_DEPLOY_HOST }}
