@@ -59,3 +59,31 @@ my_decision = {
 	widget = "<controller_type>"	# alternative short syntax, gui will be "decision_view_widget_<controller_type>"
 }
 ```
+
+## Example Decision
+
+You can find an example decision below to help you get started. This includes raw strings instead of localized strings for simplicity.
+
+```
+give_me_strength = {
+    picture = gfx/interface/illustrations/decisions/decision_personal_religious.dds
+
+    title = "Give Me Strength!"
+    desc = "Are you ready to give yourself strength?"
+    selection_tooltip = "Become stronger in battle."
+    confirm_text = "I am ready"
+
+    is_shown = {
+	    NOT = { has_character_flag = strength_given_flag }
+    }
+
+    effect = {
+        add_character_flag = {
+            flag = strength_given_flag
+        }
+        add_prowess_skill = 10
+    }
+
+    ai_will_do = 0
+}
+```
