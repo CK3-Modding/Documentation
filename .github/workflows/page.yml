@@ -14,7 +14,7 @@ jobs:
       - name: Build Site
         run: $(yarn global bin)/vuepress build .
       - name: Deploy
-        run: lftp -e "set ssl:verify-certificate false; open $remote_host; user $remote_user $remote_pass; mirror --reverse --delete --recursion=always -vvv .vuepress/dist/ ."
+        run: lftp -e "set ssl:verify-certificate false; open $remote_host; user $remote_user $remote_pass; mirror --exclude .htaccess --reverse --delete --recursion=always -vvv .vuepress/dist/ ."
         env:
           remote_host: ${{ secrets.DOCS_DEPLOY_HOST }}
           remote_user: ${{ secrets.DOCS_DEPLOY_USER }}
