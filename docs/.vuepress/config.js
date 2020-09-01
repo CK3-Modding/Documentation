@@ -7,8 +7,8 @@ module.exports = {
 				title: 'Introduction',
 				path: '/introduction/',
 				children: [
-					'/introduction/folder-structure',
-					'/introduction/project-setup'
+					'/introduction/project-setup',
+					'/introduction/folder-structure'
 				]
 			},
 			{
