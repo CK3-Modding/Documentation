@@ -17,6 +17,9 @@ module.exports = {
 					'tutorials/basic-alert',
 				]
 			}
-		]
+		],
+
+		footer: "[MIT Licensed](https://github.com/CK3-Modding/Documentation/blob/master/LICENSE)",
+		logo: "/assets/img/logo.png"
 	}
 }
