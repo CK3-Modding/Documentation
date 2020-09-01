@@ -2,6 +2,7 @@
 [![Repository Size](https://img.shields.io/github/repo-size/CK3-Modding/Documentation)](#)
 [![Issues](https://img.shields.io/github/issues/CK3-Modding/Documentation)](https://github.com/GlorifiedPig/CK3-Modding/Documentation/issues)
 [![Pull Requests](https://img.shields.io/github/issues-pr/CK3-Modding/Documentation)](https://github.com/GlorifiedPig/CK3-Modding/Documentation/pulls)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/CK3-Modding/Documentation/Page%20Build?label=page%20build)
 
 # CK3 Community Modding Documentation
 
