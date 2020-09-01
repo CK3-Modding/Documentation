@@ -1,9 +1,3 @@
----
-home: true
-title: Crusader Kings 3 Modding
-footer: [MIT Licensed](https://github.com/CK3-Modding/Documentation/blob/master/LICENSE)
----
-
 # Documentation
 
 ## Introduction
