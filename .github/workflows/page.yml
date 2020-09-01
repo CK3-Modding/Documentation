@@ -1,6 +1,9 @@
 name: Page Build
 
-on: push
+on:
+  push:
+    branch:
+      - master
 
 jobs:
   build:
