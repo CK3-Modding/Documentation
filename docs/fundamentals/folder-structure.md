@@ -4,17 +4,21 @@ Crusader Kings III is very modular and versatile in terms of what can be modded 
 
 If you would like to see the folder structure for yourself, go to `InstallationLocation/Crusader Kings III/game/common/` and you will find all the folders with examples.
 
-## Folder Types
-* `events`
-* `localization`
-* `common`
+All Crusader Kings III mods are located at `Documents/Paradox Interactive/Crusader Kings III/mod`.
+
+## Mod File Structure
+* `*.mod` - This is the file that stores all your mod information.
+* `thumbnail.png` - This is your mod's Steam Workshop thumbnail.
+* `events` - This folder houses all your mod's events.
+* `localization` - This folder houses all your mod's localization data.
+* `common` - This has a large amount of subfolders which are used to make up your mod.
     * `achievements`
     * `activities`
     * `ai_goaltypes`
     * `ai_war_stances`
     * `bookmark_portraits`
     * `bookmarks`
-    * `buildings` - Information for different building types.
+    * `buildings`
     * `casus_belli_groups`
     * `casus_belli_types`
     * `character_backgrounds`
@@ -40,12 +44,12 @@ If you would like to see the folder structure for yourself, go to `InstallationL
     * `dynasty_legacies`
     * `dynasty_perks`
     * `effect_localization`
-    * `ethnicities` - Data for different ethnicity types.
+    * `ethnicities`
     * `event_backgrounds`
     * `event_themes`
     * `factions`
     * `flavorization`
-    * `focuses` - Different types of character focuses.
+    * `focuses`
     * `game_concepts`
     * `game_rules`
     * `genes`
