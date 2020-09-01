@@ -15,3 +15,7 @@ jobs:
         run: $(yarn global bin)/vuepress build .
       - name: Take Stock
         run: ls .
+      - uses: actions/upload-artifact@v2
+        with:
+          name: site
+          path: .vuepress/dist
