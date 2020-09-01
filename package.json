@@ -1,0 +1,11 @@
+{
+	"dependencies": {
+		"vuepress": "^1.5.4",
+		"vuepress-plugin-container": "^2.1.5",
+		"@vuepress/theme-default": "^1.5.4",
+		"@vuepress/plugin-active-header-links": "^1.5.4",
+		"@vuepress/plugin-nprogress": "^1.5.4",
+		"@vuepress/plugin-register-components": "^1.5.4",
+		"@vuepress/plugin-search": "^1.5.4"
+	}
+}
