@@ -7,4 +7,4 @@
 
 ## Tutorials
 
-* [Basic Alert](basic-alert.md)
+* [Basic Alert](tutorials/basic-alert.md)
