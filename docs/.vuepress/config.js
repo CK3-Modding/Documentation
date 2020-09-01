@@ -20,6 +20,7 @@ module.exports = {
 
 		nav: [
 			{text: "Home", link: "/"},
+			{text: "Chat", link: "https://discord.gg/glorifiedstudios"},
 			{text: "Contribute", link: "https://github.com/CK3-Modding/Documentation/"}
 		]
 	},
