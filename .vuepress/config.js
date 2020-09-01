@@ -1,9 +1,7 @@
+const sidebar = require('vuepress-auto-sidebar')
+
 module.exports = {
 	themeConfig: {
-		sidebar: [
-			'/',
-			'/',
-			['/page-b', 'Explicit link text']
-		]
+		sidebar: sidebar.getSidebar()
 	}
 }
