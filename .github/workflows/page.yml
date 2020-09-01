@@ -15,7 +15,9 @@ jobs:
         run: $(yarn global bin)/vuepress build .
       - name: Take Stock
         run: ls .
-      - uses: actions/upload-artifact@v2
-        with:
-          name: site
-          path: .vuepress/dist
+      - name: Deploy
+          uses: JamesIves/github-pages-deploy-action@3.5.9
+          with:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            BRANCH: page
+            FOLDER: .vuepress/dist
