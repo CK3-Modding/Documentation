@@ -10,14 +10,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install Dependencies
-        run: yarn global add vuepress
+        run: sudo apt-get install -y lftp && yarn global add vuepress
       - name: Build Site
         run: $(yarn global bin)/vuepress build .
-      - name: Take Stock
-        run: ls .
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.5.9
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: page
-          FOLDER: .vuepress/dist
+        run: lftp -e "set ssl:verify-certificate false; open $remote_host; user $remote_user $remote_pass; mirror --reverse --delete --recursion=always -vvv .vuepress/dist/ ."
+        env:
+          remote_host: ${{ secrets.DOCS_DEPLOY_HOST }}
+          remote_user: ${{ secrets.DOCS_DEPLOY_USER }}
+          remote_pass: ${{ secrets.DOCS_DEPLOY_PASS }}
