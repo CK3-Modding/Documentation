@@ -1,11 +1,24 @@
 {
-  "name": "ck3modding.com",
+  "name": "docs.ck3modding.com",
   "version": "1.0.0",
-  "main": "index.js",
+
   "repository": "https://github.com/CK3-Modding/Documentation.git",
   "author": "CK3-Modding",
+  "contributors": [
+    {
+      "name": "Joshua Piper",
+      "email": "32164094+JoshPiper@users.noreply.github.com",
+      "url": "https://doctor-internet.dev/"
+    },
+    {
+      "name": "GlorifiedPig",
+      "email": "killingpigs123@gmail.com",
+      "url": "https://glorified.dev/"
+    }
+  ],
+
   "license": "MIT",
-  "private": true,
+
   "devDependencies": {
     "vuepress": "^1.5.4"
   },
