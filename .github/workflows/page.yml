@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install Dependencies
-        run: sudo apt-get install -y lftp && yarn global add vuepress
+        run: sudo apt-get install -y lftp && yarn install --dev --frozen-lockfile
       - name: Build Site
         run: $(yarn global bin)/vuepress build docs
       - name: Deploy
