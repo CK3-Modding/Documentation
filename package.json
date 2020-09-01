@@ -7,8 +7,7 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "vuepress": "^1.5.4",
-    "vuepress-auto-sidebar": "^1.1.1"
+    "vuepress": "^1.5.4"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
