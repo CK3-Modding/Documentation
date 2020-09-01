@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install Dependencies
-        run: sudo apt-get install -y lftp && yarn global add vuepress && yarn add vuepress-auto-sidebar
+        run: sudo apt-get install -y lftp && yarn global add vuepress
       - name: Build Site
         run: $(yarn global bin)/vuepress build .
       - name: Deploy
