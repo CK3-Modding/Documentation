@@ -1,4 +1,4 @@
-# Basic Decision
+# Creating a Decision
 
 This tutorial will teach you how to create a basic decision which is available to your character under the `Decisions` tab.
 
@@ -11,6 +11,34 @@ This tutorial will teach you how to create a basic decision which is available t
 ## Creating the File
 
 Now that we have a decisions folder set up to handle all of our decisions, we can create a new file. For now, we can call this file `example_decision.txt`.
+
+## Example Decision
+
+You can find an example decision below to help you get started. This includes raw strings instead of localized strings for simplicity.
+
+```
+give_me_strength = {
+    picture = gfx/interface/illustrations/decisions/decision_personal_religious.dds
+
+    title = "Give Me Strength!"
+    desc = "Are you ready to give yourself strength?"
+    selection_tooltip = "Become stronger in battle."
+    confirm_text = "I am ready"
+
+    is_shown = {
+	    NOT = { has_character_flag = strength_given_flag }
+    }
+
+    effect = {
+        add_character_flag = {
+            flag = strength_given_flag
+        }
+        add_prowess_skill = 10
+    }
+
+    ai_will_do = 0
+}
+```
 
 ## Decision File Structure
 
@@ -57,33 +85,5 @@ my_decision = {
 		controller = "<controller_type>"
 	}
 	widget = "<controller_type>"	# alternative short syntax, gui will be "decision_view_widget_<controller_type>"
-}
-```
-
-## Example Decision
-
-You can find an example decision below to help you get started. This includes raw strings instead of localized strings for simplicity.
-
-```
-give_me_strength = {
-    picture = gfx/interface/illustrations/decisions/decision_personal_religious.dds
-
-    title = "Give Me Strength!"
-    desc = "Are you ready to give yourself strength?"
-    selection_tooltip = "Become stronger in battle."
-    confirm_text = "I am ready"
-
-    is_shown = {
-	    NOT = { has_character_flag = strength_given_flag }
-    }
-
-    effect = {
-        add_character_flag = {
-            flag = strength_given_flag
-        }
-        add_prowess_skill = 10
-    }
-
-    ai_will_do = 0
 }
 ```

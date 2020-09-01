@@ -12,4 +12,4 @@ If you would like to contribute to the construction of the documentation, click 
 
 ## Tutorials
 
-* [Basic Decision](tutorials/basic-decision.md)
+* [Creating a Decision](tutorials/creating-a-decision.md)

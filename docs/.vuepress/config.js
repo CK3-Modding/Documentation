@@ -13,7 +13,7 @@ module.exports = {
 			{
 				title: 'Tutorials',
 				children: [
-					'tutorials/basic-decision',
+					'tutorials/decision-creation',
 				]
 			}
 		],
