@@ -1,5 +1,9 @@
 module.exports = {
 	themeConfig: {
-		sidebar: 'auto'
+		sidebar: [
+			'/',
+			'/',
+			['/page-b', 'Explicit link text']
+		]
 	}
 }
