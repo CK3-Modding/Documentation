@@ -1,10 +1,10 @@
-# Introduction
+# Folder Structure
 
 Crusader Kings III is very modular and versatile in terms of what can be modded in. There are over 80 different database object folders, with some even including sub-folders.
 
 If you would like to see the folder structure for yourself, go to `InstallationLocation/Crusader Kings III/game/common/` and you will find all the folders with examples.
 
-## Folder Types
+## Folder Types & Info
 * `achievements`
 * `activities`
 * `ai_goaltypes`
