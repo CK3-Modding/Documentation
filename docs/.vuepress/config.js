@@ -5,10 +5,10 @@ module.exports = {
 		sidebar: [
 			{
 				title: 'Introduction',
-				path: 'introduction/',
+				path: '/introduction/',
 				children: [
-					'introduction/folder-structure',
-					'introduction/project-setup'
+					'/introduction/folder-structure',
+					'/introduction/project-setup'
 				]
 			},
 			{
