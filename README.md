@@ -1,3 +1,6 @@
 # Documentation
 
-this is the stuff with the things.
+## Introduction
+
+* [Project Setup](introduction/project-setup.md)
+* [Folder Structure](introduction/folder-structure.md)
