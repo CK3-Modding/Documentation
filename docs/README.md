@@ -12,4 +12,4 @@ If you would like to contribute to the construction of the documentation, click 
 
 ## Tutorials
 
-* [Basic Alert](tutorials/basic-alert.md)
+* [Basic Decision](tutorials/basic-decision.md)
