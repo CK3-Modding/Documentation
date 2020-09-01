@@ -1,5 +1,5 @@
 # Project Setup
 
-## Introduction
+## Getting Started
 
 Sample introduction text for project setup.
