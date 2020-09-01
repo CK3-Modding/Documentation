@@ -15,7 +15,7 @@ jobs:
       - name: Install Dependencies
         run: sudo apt-get install -y lftp && yarn install --dev --frozen-lockfile
       - name: Build Site
-        run: $(yarn global bin)/vuepress build docs
+        run: yarn docs:build
       - name: Deploy
         run: lftp -e "set ssl:verify-certificate false; open $remote_host; user $remote_user $remote_pass; mirror --exclude .htaccess --reverse --delete --recursion=always -vvv docs/.vuepress/dist/ ."
         env:
