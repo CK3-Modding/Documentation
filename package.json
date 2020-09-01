@@ -1,15 +1,17 @@
 {
-	"dependencies": {
-		"vuepress": "^1.5.4",
-		"vuepress-plugin-container": "^2.1.5",
-		"@vuepress/theme-default": "^1.5.4",
-		"@vuepress/plugin-active-header-links": "^1.5.4",
-		"@vuepress/plugin-nprogress": "^1.5.4",
-		"@vuepress/plugin-register-components": "^1.5.4",
-		"@vuepress/plugin-search": "^1.5.4"
-	},
-	"scripts": {
-		"docs:dev": "vuepress dev docs",
-		"docs:build": "vuepress build docs"
-	}
+  "name": "ck3modding.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/CK3-Modding/Documentation.git",
+  "author": "CK3-Modding",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "vuepress": "^1.5.4",
+    "vuepress-auto-sidebar": "^1.1.1"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
 }
