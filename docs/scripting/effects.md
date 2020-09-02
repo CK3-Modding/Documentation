@@ -36,7 +36,7 @@ Effects play a large role in in Crusader Kings III. They are used in order to af
 | scheme_freeze_days | scheme_freeze_days = X freezes the scheme for X days (0 unfreezes the scheme) | scheme |  |
 | add_county_modifier | Add a modifier to a county | landed title |  |
 | change_county_control | Changes the county control of a title. If the title has higher tier than county, the effect will propagate down to all counties below it. | landed title |  |
-| change_de_jure_drift_progress | Change the progress of de jure drift of a title = { change_de_jure_drift_progress = { target =  values =  } } | landed title |  |
+| change_de_jure_drift_progress | Change the progress of de jure drift of a title. ```{ change_de_jure_drift_progress = { target =  values =  } }``` | landed title |  |
 | change_development_level | Changes the development level of a title. If the title has higher tier than county, the effect will propagate down to all counties below it. | landed title |  |
 | change_development_progress | Changes the development progress of a title. If the title has higher tier than county, the effect will propagate down to all counties below it. | landed title |  |
 | change_development_progress_with_overflow | Changes the development progress of a title. If the title has higher tier than county, the effect will propagate down to all counties below it. Will overflow, so adding +100 to a county with 50 progress left will increase the level by 1 and result in 50 progress towards the next level | landed title |  |
@@ -141,7 +141,7 @@ Effects play a large role in in Crusader Kings III. They are used in order to af
 | end_story | Ends a story and executes it's on_end effect, the story can no longer be accessed after this | story cycle |  |
 | make_story_owner | makes the character the new owner of the story | story cycle | character |
 | add_innovation | Add innovation to a culture | culture |  |
-| add_random_innovation | Add random available innovation = { add_random_innovation = culture_group_military/culture_group_civic/culture_group_regional/yes } | culture |  |
+| add_random_innovation | Add random available innovation. ```{ add_random_innovation = culture_group_military/culture_group_civic/culture_group_regional/yes }``` | culture |  |
 | get_all_innovations_from | Discover all innovations from the target culture | culture | culture |
 | get_random_innovation_from | Get random available innovation from another culture | culture |  |
 | add_character_flag | Adds a character flag. X is the name of the flag and Y is a value or value interval "{ min max }". | character |  |
@@ -214,7 +214,7 @@ Effects play a large role in in Crusader Kings III. They are used in order to af
 | create_alliance | Create an alliance between the scoped character and the target. The allied through characters determine who gets checked against for if the alliance should persist or not. | character |  |
 | create_cadet_branch | The scope character creates a cadet branch of the house he is in [yes\|no] | character |  |
 | create_faction | the scoped character creates a faction of the specified type against the specified target, create_faction = { type = X target = Y } | character |  |
-| create_story | Creates and initializes a story cycle with the current character as owner | create_story = {    type = story_type     save_scope_as/save_temporary_scope_as = scope_name # optional way to get a reference to the new story } | character |
+| create_story | Creates and initializes a story cycle with the current character as owner - create_story = {    type = story_type     save_scope_as/save_temporary_scope_as = scope_name # optional way to get a reference to the new story } | character |
 | death | kills a character, death = { killer = X death_reason = Y }, X is a character and Y is one of the death reason keys. Or death = natural which will pick a natural death reason to kill the character from. | character |  |
 | depose | The character gets deposed. | character |  |
 | destroy_title | Destroys a title | character | landed title |
@@ -413,7 +413,7 @@ Effects play a large role in in Crusader Kings III. They are used in order to af
 | ordered_realm_county | Iterate through all counties in the realm. Based on top liege | character | landed title |
 | ordered_realm_de_jure_duchy | Iterate through all de jure duchies that have at least one county in the realm. Based on top liege | character | landed title |
 | ordered_realm_de_jure_empire | Iterate through all de jure empire that have at least one county in the realm. Based on top liege | character | landed title |
-| ordered_realm_de_jure_kingdom | Iterate through all de jure kingdom that have at least one county in the realm. Based on top liege | ordered_realm_de_jure_kingdom = { limit = {  } order_by = script_value position = int min = int max = script_value check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  } | character |
+| ordered_realm_de_jure_kingdom | Iterate through all de jure kingdom that have at least one county in the realm. Based on top liege. ```ordered_realm_de_jure_kingdom = { limit = {} order_by = script_value position = int min = int max = script_value check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max }``` | character |
 | ordered_realm_province | Iterate through all realm provinces of a character | character | province |
 | ordered_relation | Iterate through scripted relations of a given type or multiple types, if someone is multiple relations they will only be in the list once | character | character |
 | ordered_scheme | Iterate through all schemes owned by the character | character | scheme |
@@ -593,7 +593,7 @@ Effects play a large role in in Crusader Kings III. They are used in order to af
 | scriptedtests_recalculate_character_modifier | Recalculates the modifier of the scoped character | character |  |
 | scriptedtests_recalculate_succession | Recalculates the line of succession of the scoped character | character |  |
 | send_interface_message | Sends a message to the player playing the character in the scope and then executes any effects inside. For the message text and tooltip, $EFFECT$ contains the text description of the effects in the past tense. And $DESC$ contains the text from the desc field. | character |  |
-| send_interface_toast | Sends a message to the player playing the character in the scope and then executes any effects inside. For the message text and tooltip, $EFFECT$ contains the text description of the effects in the past tense. And $DESC$ contains the text from the desc field. send_interface_toast = {    type = message_type # default: send_interface_toast     title = LOCALIZATION # optional, otherwise takes it from the message type     desc = LOCALIZATION # optional, otherwise takes it from the message type     tooltip = LOCALIZATION # optional, otherwise takes it from the message type     left_icon = scope:recipient # optional, character or title     right_icon = scope:the_title # optional, character or title     goto = scope:the_title # optional, character, barony title, province will add a goto button     # optional effects...     add_dread = 5     scope:someone = { add_gold = 5 } } |  |  |
+| send_interface_toast | Sends a message to the player playing the character in the scope and then executes any effects inside. For the message text and tooltip, $EFFECT$ contains the text description of the effects in the past tense. And $DESC$ contains the text from the desc field. |  |  |
 | set_absolute_country_control | Sets if this character has absolute country control, unlock_character_movement = yes/no/boolean event target | character |  |
 | set_beneficiary | The target character becomes the beneficiary of the scoped character. set_beneficiary = some character | character | character |
 | set_character_faith | Changes what faith a character has executing the effects for it. For history setup use 'set_character_faith_history' instead. | character | faith |
@@ -771,7 +771,7 @@ Effects play a large role in in Crusader Kings III. They are used in order to af
 | break_betrothal | Breaks the betrothal between the scope character to the target character | none | character |
 | break_if | conditionally break execution of effects, break_if = { X }, X is a trigger | none |  |
 | change_global_variable | Changes the value or a numeric variable Where X is the name of the numeric variable to modify Where the valid operations are add, subtract, multiply, divide and modulo Y is a fixed point value, script value or event target of a value type | none |  |
-| change_local_variable - Changes the value or a numeric variable Where X is the name of the numeric variable to modify Where the valid operations are add, subtract, multiply, divide and modulo Y is a fixed point value, script value or event target of a value type | change_variable = { name = X operation = Y } |  |  |
+| change_local_variable | Changes the value or a numeric variable Where X is the name of the numeric variable to modify Where the valid operations are add, subtract, multiply, divide and modulo Y is a fixed point value, script value or event target of a value type. ```change_variable = { name = X operation = Y }``` |  |  |
 | change_title_holder | Changes Title Holder. holder = 'Character that should get the title' change = 'previously created title_and_vassal_change', adds a title change, will not transfer vassalstake_baronies = yes # Optional; if set, will cause baronies to be taken (rather than vassalized) as well if this title is a countygovernment_base = character # Optional, if the character getting the title was unlanded, their new government will be based on the government of government_base. If no government_base is specified, the government will be based on holder's government. | none |  |
 | change_title_holder_include_vassals | Changes Title Holder. holder = 'Character that should get the title' change = 'previously created title_and_vassal_change', adds a title change, will transfer vassalstake_baronies = yes # Optional; if set, will cause baronies to be taken (rather than vassalized) as well if this title is a countygovernment_base = character # Optional, if the character getting the title was unlanded, their new government will be based on the government of government_base. If no government_base is specified, the government will be based on holder's government. | none |  |
 | change_trait_rank | Changes the trait rank = { trait = trait_group rank = change max = maximum new rank } | none |  |
