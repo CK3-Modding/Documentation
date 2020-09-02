@@ -7,6 +7,7 @@ module.exports = {
 			  indexSuffix: '/',
 			  notFoundPath: '/404.html',
 			},
+			'vuepress-plugin-smooth-scroll'
 		],
 	],
 
