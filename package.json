@@ -20,8 +20,7 @@
 
   "dependencies": {
     "vuepress": "^1.5.4",
-    "vuepress-plugin-clean-urls": "^1.1.2",
-    "vuepress-plugin-smooth-scroll": "^0.0.10"
+    "vuepress-plugin-clean-urls": "^1.1.2"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",

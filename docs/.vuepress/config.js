@@ -6,12 +6,13 @@ module.exports = {
 			  normalSuffix: '',
 			  indexSuffix: '/',
 			  notFoundPath: '/404.html',
-			},
-			'vuepress-plugin-smooth-scroll'
+			}
 		],
 	],
 
 	themeConfig: {
+		smoothScroll: true,
+
 		sidebar: [
 			{
 				title: 'Fundamentals',
