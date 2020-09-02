@@ -1,210 +1,918 @@
 # Effects
 
-Effects are very important in Crusader Kings III. They are used in order to affect the game dynamically in combination with scopes. This is what essentially happens after an event is triggered, to put it simply.
+Effects play a large role in in Crusader Kings III. They are used in order to affect the game dynamically in combination with scopes. Below you can find a complete list of effects found withinin the game, sorted into a nice table.
 
 ## List of Effects
 
-| Name                                                 | Description                                                  | Scopes    |
-| ---------------------------------------------------- | ------------------------------------------------------------ | --------- |
-| add_character_flag                                   | Adds a flag to a character                                   | character |
-| add_character_modifier                               | Adds a character modifier                                    | character |
-| add_character_modifier_duration                      | Adds a character modifier for a set duration                 | character |
-| add_courtier                                         | Adds a courtier to a character's court                       | character |
-| add_diplomacy_lifestyle_perk_points                  | Adds diplomacy lifestyle perk points                         | character |
-| add_diplomacy_lifestyle_xp                           | Adds diplomacy lifestyle experience                          | character |
-| add_diplomacy_skill                                  | Increases a character's diplomacy skill                      | character |
-| add_dread                                            | Increases a character's dread score                          | character |
-| add_dynasty_modifier                                 | Adds a dynasty modifier                                      | character |
-| add_dynasty_modifier_duration                        | Adds a dynasty modifier for a set duration                   | character |
-| add_focus_progress                                   | Adds progress to a character's focus                         | character |
-| add_gold                                             | Adds gold to a character's balance                           | character |
-| add_guest_courtier                                   | Adds a guest courtier to a character's court                 | character |
-| add_hook                                             | Adds a hook available for usage                              | character |
-| add_hook_strong                                      | Adds a strong hook available for usage                       | character |
-| add_house_modifier                                   | Adds a house modifier                                        | character |
-| add_house_modifier_duration                          | Adds a house modifier for a set duration                     | character |
-| add_intrigue_lifestyle_perk_points                   | Adds intrigue lifestyle perk points                          | character |
-| add_intrigue_lifestyle_xp                            | Adds intrigue lifestyle experience                           | character |
-| add_intrigue_skill                                   | Increases a character's intrigue skill                       | character |
-| add_learning_lifestyle_perk_points                   | Adds learning lifestyle perk points                          | character |
-| add_learning_lifestyle_xp                            | Adds learning lifestyle experience                           | character |
-| add_learning_skill                                   | Increases a character's learning skill                       | character |
-| add_martial_lifestyle_perk_points                    | Adds martial lifestyle perk points                           | character |
-| add_martial_lifestyle_xp                             | Adds martial lifestyle experience                            | character |
-| add_martial_skill                                    | Increases a character's martial skill                        | character |
-| add_opinion                                          | Increases an opinion of a character                          | character |
-| add_opinion_decaying                                 | Increases an opinion of a character which decays over time   | character |
-| add_opinion_for_duration                             | Increases an opinion of a character for a set amount of time | character |
-| add_opinion_growing                                  | Increases an opinion of a character which grows over time    | character |
-| add_opinion_imprison_reason                          |                                                              | character |
-| add_opinion_imprison_reason_unusable                 |                                                              | character |
-| add_opinion_theocracy_approve                        |                                                              | character |
-| add_piety                                            | Adds to a character's piety count                            | character |
-| add_piety_experience                                 |                                                              | character |
-| add_piety_level                                      |                                                              | character |
-| add_prestige                                         | Adds to a character's prestige count                         | character |
-| add_prestige_experience                              |                                                              | character |
-| add_prestige_level                                   |                                                              | character |
-| add_prowess_skill                                    | Increases a character's prowess skill                        | character |
-| add_realm_law                                        | Adds a law to the character's realm                          | character |
-| add_realm_law_skip_effects                           |                                                              | character |
-| add_scheme_modifier_duration                         |                                                              | character |
-| add_stewardship_lifestyle_perk_points                |                                                              | character |
-| add_stewardship_lifestyle_xp                         |                                                              | character |
-| add_stewardship_skill                                | Increases a character's stewardship skill                    | character |
-| add_stress                                           | Adds to a character's stress                                 | character |
-| add_stress_critical                                  | Adds critical stress to a character                          | character |
-| add_trait                                            | Assigns a trait to a character                               | character |
-| add_trait_force_tooltip                              |                                                              | character |
-| add_truce_both_ways                                  |                                                              | character |
-| add_truce_one_way                                    |                                                              | character |
-| add_tyranny                                          | Adds to a character's tyranny score                          | character |
-| add_visiting_courtier                                |                                                              | character |
-| allow_alliance                                       |                                                              | character |
-| banish                                               | Banishes a character from their realm                        | character |
-| break_alliance                                       |                                                              | character |
-| break_betrothal                                      |                                                              | character |
-| cancel_truce_both_ways                               |                                                              | character |
-| cancel_truce_one_way                                 |                                                              | character |
-| change_government                                    |                                                              | character |
-| change_liege                                         |                                                              | character |
-| change_prison_type                                   |                                                              | character |
-| complete_activity                                    |                                                              | character |
-| consume_banish_reasons                               |                                                              | character |
-| consume_execute_reasons                              |                                                              | character |
-| consume_imprisonment_reasons                         |                                                              | character |
-| consume_revoke_title_reason                          |                                                              | character |
-| create_betrothal                                     |                                                              | character |
-| create_betrothal_matrilineal                         |                                                              | character |
-| create_character                                     |                                                              | character |
-| create_holy_order                                    |                                                              | character |
-| create_named_character                               |                                                              | character |
-| death                                                | Kills a character                                            | character |
-| death_killer                                         |                                                              | character |
-| depose                                               |                                                              | character |
-| divorce                                              |                                                              | character |
-| duel                                                 |                                                              | character |
-| duel_against                                         |                                                              | character |
-| educate_child_option_convert_culture_effect          |                                                              | character |
-| educate_child_option_convert_culture_likely_effect   |                                                              | character |
-| educate_child_option_convert_culture_unlikely_effect |                                                              | character |
-| educate_child_option_convert_faith_effect            |                                                              | character |
-| educate_child_option_convert_faith_likely_effect     |                                                              | character |
-| educate_child_option_convert_faith_unlikely_effect   |                                                              | character |
-| end_pregnancy                                        | Ends a character's pregnancy                                 | character |
-| end_story                                            |                                                              | character |
-| force_vote_as                                        |                                                              | character |
-| force_vote_as_no_duration                            |                                                              | character |
-| give_nickname                                        | Sets a character's nickname                                  | character |
-| hajj_distance_info_text                              |                                                              | character |
-| imprison                                             |                                                              | character |
-| keep_liege                                           |                                                              | character |
-| loyalty_and_respect_perk_stats_effect                |                                                              | character |
-| make_concubine                                       |                                                              | character |
-| make_pregnant                                        |                                                              | character |
-| make_trait_active                                    |                                                              | character |
-| make_trait_active_force_tooltip                      |                                                              | character |
-| make_trait_inactive                                  |                                                              | character |
-| make_trait_inactive_force_tooltip                    |                                                              | character |
-| marry                                                | Marries two characters                                       | character |
-| marry_matrilineal                                    | Marries two characters matrilineally                         | character |
-| move_to_pool                                         |                                                              | character |
-| move_to_pool_at                                      |                                                              | character |
-| multiply_focus_progress                              |                                                              | character |
-| party_baron_negative_attitude_counter_stress_tt      |                                                              | character |
-| party_baron_positive_attitude_counter_stress_tt      |                                                              | character |
-| pay_gold                                             | Forces a character to pay gold to another                    | character |
-| recruit_courtier                                     | Recruits a courtier at the character's court                 | character |
-| refill_garrison                                      | Refills a character's garrison                               | character |
-| refill_levy                                          | Refill's a character's levy                                  | character |
-| release_from_prison                                  | Releases a character from prison                             | character |
-| remove_character_flag                                | Removes a flag from a character                              | character |
-| remove_character_modifier                            |                                                              | character |
-| remove_concubine                                     |                                                              | character |
-| remove_courtier_or_guest                             |                                                              | character |
-| remove_decision_cooldown                             |                                                              | character |
-| remove_dynasty_modifier                              |                                                              | character |
-| remove_gold                                          | Removes gold from a character                                | character |
-| remove_hook                                          |                                                              | character |
-| remove_house_modifier                                |                                                              | character |
-| remove_interaction_cooldown                          |                                                              | character |
-| remove_interaction_cooldown_against                  |                                                              | character |
-| remove_nickname                                      | Removes a nickname from a character                          | character |
-| remove_opinion                                       | Removes opinion from a character                             | character |
-| remove_relation_best_friend                          |                                                              | character |
-| remove_relation_bully                                |                                                              | character |
-| remove_relation_court_physician                      |                                                              | character |
-| remove_relation_crush                                |                                                              | character |
-| remove_relation_friend                               |                                                              | character |
-| remove_relation_guardian                             |                                                              | character |
-| remove_relation_intrigue_mentor                      |                                                              | character |
-| remove_relation_intrigue_student                     |                                                              | character |
-| remove_relation_lover                                |                                                              | character |
-| remove_relation_mentor                               |                                                              | character |
-| remove_relation_nemesis                              |                                                              | character |
-| remove_relation_oaf                                  |                                                              | character |
-| remove_relation_potential_friend                     |                                                              | character |
-| remove_relation_potential_lover                      |                                                              | character |
-| remove_relation_potential_rival                      |                                                              | character |
-| remove_relation_rival                                |                                                              | character |
-| remove_relation_soldier_friend                       |                                                              | character |
-| remove_relation_soulmate                             |                                                              | character |
-| remove_relation_student                              |                                                              | character |
-| remove_relation_victim                               |                                                              | character |
-| remove_relation_ward                                 |                                                              | character |
-| remove_scheme_cooldown_against                       |                                                              | character |
-| remove_trait                                         | Removes a trait from a character                             | character |
-| remove_trait_force_tooltip                           |                                                              | character |
-| return_to_court                                      |                                                              | character |
-| set_character_faith                                  |                                                              | character |
-| set_character_faith_with_conversion                  |                                                              | character |
-| set_child_of_concubine_on_pregnancy                  |                                                              | character |
-| set_culture                                          | Sets a character's culture                                   | character |
-| set_culture_same_as                                  | Make a character's culture mimic another character's         | character |
-| set_designated_heir                                  | Sets a character's designated heir                           | character |
-| set_designated_heir_none                             |                                                              | character |
-| set_dynasty                                          | Sets a character's dynasty                                   | character |
-| set_employer                                         |                                                              | character |
-| set_father                                           |                                                              | character |
-| set_focus                                            |                                                              | character |
-| set_focus_no                                         |                                                              | character |
-| set_focus_progress                                   |                                                              | character |
-| set_house                                            |                                                              | character |
-| set_known_bastard_on_pregnancy                       |                                                              | character |
-| set_player_character                                 |                                                              | character |
-| set_primary_spouse                                   |                                                              | character |
-| set_relation_best_friend                             |                                                              | character |
-| set_relation_bully                                   |                                                              | character |
-| set_relation_court_physician                         |                                                              | character |
-| set_relation_crush                                   |                                                              | character |
-| set_relation_friend                                  |                                                              | character |
-| set_relation_guardian                                |                                                              | character |
-| set_relation_intrigue_mentor                         |                                                              | character |
-| set_relation_intrigue_student                        |                                                              | character |
-| set_relation_lover                                   |                                                              | character |
-| set_relation_mentor                                  |                                                              | character |
-| set_relation_nemesis                                 |                                                              | character |
-| set_relation_oaf                                     |                                                              | character |
-| set_relation_potential_friend                        |                                                              | character |
-| set_relation_potential_lover                         |                                                              | character |
-| set_relation_potential_rival                         |                                                              | character |
-| set_relation_rival                                   |                                                              | character |
-| set_relation_soldier_friend                          |                                                              | character |
-| set_relation_soulmate                                |                                                              | character |
-| set_relation_student                                 |                                                              | character |
-| set_relation_victim                                  |                                                              | character |
-| set_relation_ward                                    |                                                              | character |
-| set_sexuality                                        |                                                              | character |
-| set_to_lowborn                                       |                                                              | character |
-| set_trait_rank                                       |                                                              | character |
-| set_vassal_contract_modification_blocked             |                                                              | character |
-| spawn_activity                                       |                                                              | character |
-| spawn_army                                           |                                                              | character |
-| start_scheme                                         |                                                              | character |
-| stress_impact                                        |                                                              | character |
-| stress_impact_critical                               |                                                              | character |
-| use_hook                                             |                                                              | character |
-| use_hook_strong                                      |                                                              | character |
-| vassal_contract_decrease_obligation_level            |                                                              | character |
-| vassal_contract_increase_obligation_level            |                                                              | character |
-| visit_court_of                                       |                                                              | character |
+| Name | Description | Supported Scopes | Supported Targets |
+| - | - | - | - |
+| add_dynasty_modifier | Add a modifier to a dynasty | dynasty |  |
+| add_dynasty_perk | Adds dynasty perk | dynasty |  |
+| add_dynasty_prestige | adds dynasty prestige | dynasty |  |
+| add_dynasty_prestige_level | adds dynasty prestige levels | dynasty |  |
+| every_dynasty_member | Iterate through all dynasty members | dynasty | character |
+| ordered_dynasty_member | Iterate through all dynasty members | dynasty | character |
+| random_dynasty_member | Iterate through all dynasty members | dynasty | character |
+| remove_all_dynasty_modifier_instances | Remove all instances of a modifier from a dynasty | dynasty |  |
+| remove_dynasty_modifier | Remove a modifier from a dynasty | dynasty |  |
+| add_house_modifier | Add a modifier to a house | dynasty house |  |
+| every_house_member | Iterate through all house members | dynasty house | character |
+| ordered_house_member | Iterate through all house members | dynasty house | character |
+| random_house_member | Iterate through all house members | dynasty house | character |
+| remove_all_house_modifier_instances | Remove all instances of a modifier from a house | dynasty house |  |
+| remove_house_modifier | Remove a modifier from a house | dynasty house |  |
+| every_faith | Iterate through all faiths within a religion | religion | faith |
+| ordered_faith | Iterate through all faiths within a religion | religion | faith |
+| random_faith | Iterate through all faiths within a religion | religion | faith |
+| add_scheme_modifier | adds the specified scheme modifier, add_scheme_modifier = { type = X days = Y } (days are optional, the modifier will expire in Y days if specified) | scheme |  |
+| add_scheme_progress | Add progress to the scope scheme. (progress is in 0.0 - 100.0 range) | scheme |  |
+| end_scheme | Ends a specific scheme and removes it without any other effect | scheme |  |
+| every_scheme_agent | Iterate through all agents in the scheme | scheme | character |
+| expose_scheme | Exposes the scheme to the defender | scheme |  |
+| expose_scheme_agent | Exposes the target character as an agent of the current scheme | scheme | character |
+| ordered_scheme_agent | Iterate through all agents in the scheme | scheme | character |
+| random_scheme_agent | Iterate through all agents in the scheme | scheme | character |
+| remove_scheme_modifier | removes the specified scheme modifier | scheme |  |
+| scheme_freeze_days | scheme_freeze_days = X freezes the scheme for X days (0 unfreezes the scheme) | scheme |  |
+| add_county_modifier | Add a modifier to a county | landed title |  |
+| change_county_control | Changes the county control of a title. If the title has higher tier than county, the effect will propagate down to all counties below it. | landed title |  |
+| change_de_jure_drift_progress | Change the progress of de jure drift of a title = { change_de_jure_drift_progress = { target =  values =  } } | landed title |  |
+| change_development_level | Changes the development level of a title. If the title has higher tier than county, the effect will propagate down to all counties below it. | landed title |  |
+| change_development_progress | Changes the development progress of a title. If the title has higher tier than county, the effect will propagate down to all counties below it. | landed title |  |
+| change_development_progress_with_overflow | Changes the development progress of a title. If the title has higher tier than county, the effect will propagate down to all counties below it. Will overflow, so adding +100 to a county with 50 progress left will increase the level by 1 and result in 50 progress towards the next level | landed title |  |
+| clear_title_laws | remove all title laws from the scoped title. DOES NOT apply law removal costs and effects. | landed title |  |
+| clear_title_laws_effects | remove all title laws from the scoped title. DOES apply law removal costs and effects. | landed title |  |
+| copy_title_history | Copy title history from another title | landed title | landed title |
+| every_claimant | Iterate through all claimants to title. parameters: explicit = yes/no/all - default yes | landed title | character |
+| every_connected_county | Iterate through all counties connected to this one. Is based on top liege | landed title | landed title |
+| every_county_province | Iterate through all provinces in a county | landed title | province |
+| every_de_jure_county_holder | Iterate through all characters directly holding counties within this dejure title | landed title | character |
+| every_de_jure_top_liege | Iterate through all top lieges of the counts within this dejure title | landed title | character |
+| every_dejure_vassal_title_holder | Iterate through all the vassal holders of the title | landed title | character |
+| every_election_candidate | Iterate through all characters who are valid candidates in an election for a title | landed title | character |
+| every_elector | Iterate through all characters who are valid electors in an election for a title | landed title | character |
+| every_in_de_facto_hierarchy | Iterate through the title itself, all de facto vassals, and below. The continue trigger specifies whether to recursively iterate through the vassal's vassal This is unrelated to the limit; if the limit is met it is added to the list, but its vassals will get checked even if the limit isn't met as long as the 'continue' trigger is ..._de_jure_vassal_and_below = { continue = { conditions } } | landed title | landed title |
+| every_in_de_jure_hierarchy | Iterate through the title itself, all de jure vassals, and below. The continue trigger specifies whether to recursively iterate through the vassal's vassal This is unrelated to the limit; if the limit is met it is added to the list, but its vassals will get checked even if the limit isn't met as long as the 'continue' trigger is ..._de_jure_vassal_and_below = { continue = { conditions } } | landed title | landed title |
+| every_neighboring_county | Iterate through all neighboring counties. Can only be used in county scope | landed title | landed title |
+| every_this_title_or_de_jure_above | Iterate through this title and all its dejure liege titles | landed title | landed title |
+| every_title_heir | Line of succession for the scoped title | landed title | character |
+| every_title_joined_faction | Iterate through all factions joined the scope landed title | landed title | faction |
+| every_title_to_title_neighboring_and_across_water_barony | Scopes from a title to a neighboring barony (incl. across water, looking trough the de Jure lieges) | landed title | landed title |
+| every_title_to_title_neighboring_and_across_water_county | Scopes from a title to a neighboring county (incl. across water, looking trough the de Jure lieges) | landed title | landed title |
+| every_title_to_title_neighboring_and_across_water_duchy | Scopes from a title to a neighboring duchy (incl. across water, looking trough the de Jure lieges) | landed title | landed title |
+| every_title_to_title_neighboring_and_across_water_empire | Scopes from a title to a neighboring empire (incl. across water, looking trough the de Jure lieges) | landed title | landed title |
+| every_title_to_title_neighboring_and_across_water_kingdom | Scopes from a title to a neighboring kingdom (incl. across water, looking trough the de Jure lieges) | landed title | landed title |
+| every_title_to_title_neighboring_barony | Scopes from a title to a neighboring barony (looking trough the de Jure lieges) | landed title | landed title |
+| every_title_to_title_neighboring_county | Scopes from a title to a neighboring county (looking trough the de Jure lieges) | landed title | landed title |
+| every_title_to_title_neighboring_duchy | Scopes from a title to a neighboring duchy (looking trough the de Jure lieges) | landed title | landed title |
+| every_title_to_title_neighboring_empire | Scopes from a title to a neighboring empire (looking trough the de Jure lieges) | landed title | landed title |
+| every_title_to_title_neighboring_kingdom | Scopes from a title to a neighboring kingdom (looking trough the de Jure lieges) | landed title | landed title |
+| lease_out_to | Lease out the scoped title | landed title |  |
+| ordered_claimant | Iterate through all claimants to title. parameters: explicit = yes/no/all - default yes | landed title | character |
+| ordered_connected_county | Iterate through all counties connected to this one. Is based on top liege | landed title | landed title |
+| ordered_county_province | Iterate through all provinces in a county | landed title | province |
+| ordered_de_jure_county_holder | Iterate through all characters directly holding counties within this dejure title | landed title | character |
+| ordered_de_jure_top_liege | Iterate through all top lieges of the counts within this dejure title | landed title | character |
+| ordered_dejure_vassal_title_holder | Iterate through all the vassal holders of the title | landed title | character |
+| ordered_election_candidate | Iterate through all characters who are valid candidates in an election for a title | landed title | character |
+| ordered_elector | Iterate through all characters who are valid electors in an election for a title | landed title | character |
+| ordered_in_de_facto_hierarchy | Iterate through the title itself, all de facto vassals, and below. The continue trigger specifies whether to recursively iterate through the vassal's vassal This is unrelated to the limit; if the limit is met it is added to the list, but its vassals will get checked even if the limit isn't met as long as the 'continue' trigger is ..._de_jure_vassal_and_below = { continue = { conditions } } | landed title | landed title |
+| ordered_in_de_jure_hierarchy | Iterate through the title itself, all de jure vassals, and below. The continue trigger specifies whether to recursively iterate through the vassal's vassal This is unrelated to the limit; if the limit is met it is added to the list, but its vassals will get checked even if the limit isn't met as long as the 'continue' trigger is ..._de_jure_vassal_and_below = { continue = { conditions } } | landed title | landed title |
+| ordered_neighboring_county | Iterate through all neighboring counties. Can only be used in county scope | landed title | landed title |
+| ordered_this_title_or_de_jure_above | Iterate through this title and all its dejure liege titles | landed title | landed title |
+| ordered_title_heir | Line of succession for the scoped title | landed title | character |
+| ordered_title_joined_faction | Iterate through all factions joined the scope landed title | landed title | faction |
+| ordered_title_to_title_neighboring_and_across_water_barony | Scopes from a title to a neighboring barony (incl. across water, looking trough the de Jure lieges) | landed title | landed title |
+| ordered_title_to_title_neighboring_and_across_water_county | Scopes from a title to a neighboring county (incl. across water, looking trough the de Jure lieges) | landed title | landed title |
+| ordered_title_to_title_neighboring_and_across_water_duchy | Scopes from a title to a neighboring duchy (incl. across water, looking trough the de Jure lieges) | landed title | landed title |
+| ordered_title_to_title_neighboring_and_across_water_empire | Scopes from a title to a neighboring empire (incl. across water, looking trough the de Jure lieges) | landed title | landed title |
+| ordered_title_to_title_neighboring_and_across_water_kingdom | Scopes from a title to a neighboring kingdom (incl. across water, looking trough the de Jure lieges) | landed title | landed title |
+| ordered_title_to_title_neighboring_barony | Scopes from a title to a neighboring barony (looking trough the de Jure lieges) | landed title | landed title |
+| ordered_title_to_title_neighboring_county | Scopes from a title to a neighboring county (looking trough the de Jure lieges) | landed title | landed title |
+| ordered_title_to_title_neighboring_duchy | Scopes from a title to a neighboring duchy (looking trough the de Jure lieges) | landed title | landed title |
+| ordered_title_to_title_neighboring_empire | Scopes from a title to a neighboring empire (looking trough the de Jure lieges) | landed title | landed title |
+| ordered_title_to_title_neighboring_kingdom | Scopes from a title to a neighboring kingdom (looking trough the de Jure lieges) | landed title | landed title |
+| random_claimant | Iterate through all claimants to title. parameters: explicit = yes/no/all - default yes | landed title | character |
+| random_connected_county | Iterate through all counties connected to this one. Is based on top liege random_connected_county = { max_naval_distance = 500 allow_one_county_land_gap = yes } | landed title | landed title |
+| random_county_province | Iterate through all provinces in a county | landed title | province |
+| random_de_jure_county_holder | Iterate through all characters directly holding counties within this dejure title | landed title | character |
+| random_de_jure_top_liege | Iterate through all top lieges of the counts within this dejure title | landed title | character |
+| random_dejure_vassal_title_holder | Iterate through all the vassal holders of the title | landed title | character |
+| random_election_candidate | Iterate through all characters who are valid candidates in an election for a title | landed title | character |
+| random_elector | Iterate through all characters who are valid electors in an election for a title | landed title | character |
+| random_in_de_facto_hierarchy | Iterate through the title itself, all de facto vassals, and below. The continue trigger specifies whether to recursively iterate through the vassal's vassal This is unrelated to the limit; if the limit is met it is added to the list, but its vassals will get checked even if the limit isn't met as long as the 'continue' trigger is ..._de_jure_vassal_and_below = { continue = { conditions } } | landed title | landed title |
+| random_in_de_jure_hierarchy | Iterate through the title itself, all de jure vassals, and below. The continue trigger specifies whether to recursively iterate through the vassal's vassal This is unrelated to the limit; if the limit is met it is added to the list, but its vassals will get checked even if the limit isn't met as long as the 'continue' trigger is ..._de_jure_vassal_and_below = { continue = { conditions } } | landed title | landed title |
+| random_neighboring_county | Iterate through all neighboring counties. Can only be used in county scope | landed title | landed title |
+| random_this_title_or_de_jure_above | Iterate through this title and all its dejure liege titles | landed title | landed title |
+| random_title_heir | Line of succession for the scoped title | landed title | character |
+| random_title_joined_faction | Iterate through all factions joined the scope landed title | landed title | faction |
+| random_title_to_title_neighboring_and_across_water_barony | Scopes from a title to a neighboring barony (incl. across water, looking trough the de Jure lieges) | landed title | landed title |
+| random_title_to_title_neighboring_and_across_water_county | Scopes from a title to a neighboring county (incl. across water, looking trough the de Jure lieges) | landed title | landed title |
+| random_title_to_title_neighboring_and_across_water_duchy | Scopes from a title to a neighboring duchy (incl. across water, looking trough the de Jure lieges) | landed title | landed title |
+| random_title_to_title_neighboring_and_across_water_empire | Scopes from a title to a neighboring empire (incl. across water, looking trough the de Jure lieges) | landed title | landed title |
+| random_title_to_title_neighboring_and_across_water_kingdom | Scopes from a title to a neighboring kingdom (incl. across water, looking trough the de Jure lieges) | landed title | landed title |
+| random_title_to_title_neighboring_barony | Scopes from a title to a neighboring barony (looking trough the de Jure lieges) | landed title | landed title |
+| random_title_to_title_neighboring_county | Scopes from a title to a neighboring county (looking trough the de Jure lieges) | landed title | landed title |
+| random_title_to_title_neighboring_duchy | Scopes from a title to a neighboring duchy (looking trough the de Jure lieges) | landed title | landed title |
+| random_title_to_title_neighboring_empire | Scopes from a title to a neighboring empire (looking trough the de Jure lieges) | landed title | landed title |
+| random_title_to_title_neighboring_kingdom | Scopes from a title to a neighboring kingdom (looking trough the de Jure lieges) | landed title | landed title |
+| remove_all_county_modifier_instances | Remove all instances of a modifier from a county | landed title |  |
+| remove_county_modifier | Remove a modifier from a county | landed title |  |
+| reset_title_name | Sets the name and adjective of the scoped title back to being based on its key. Won't cause the prefix to change | landed title |  |
+| reset_title_prefix | Sets the prefix of the scoped title back to being based on its key. Won't cause its adjective or name to change | landed title |  |
+| revoke_lease | Revoke the lease of the scoped title | landed title |  |
+| set_always_follows_primary_heir | Sets if the title should always go to the primary heir in partition succession | landed title |  |
+| set_capital_county | Sets the capital county of the title to the target county | landed title | landed title |
+| set_color_from_title | Sets the color of the title to the same as the target title (shifted very slightly to not be identical) | landed title | landed title |
+| set_county_culture | Sets the culture of a county | landed title |  |
+| set_county_faith | Changes what faith a county has | landed title |  |
+| set_de_jure_liege_title | Set a new DeJure liege title | landed title | landed title |
+| set_definitive_form | Sets if the title should use a definitive form name (no 'Kingdom of') | landed title |  |
+| set_delete_on_destroy | Sets if the title should be deleted from the gamestate completely when it is destroyed | landed title |  |
+| set_destroy_if_invalid_heir | Sets if the title should be destroyed on succession if there's no heir matching its restrictions | landed title |  |
+| set_destroy_on_succession | Sets if the title should be destroyed on succession | landed title |  |
+| set_landless_title | Sets if the title is landless (can be held by rulers with no land) | landed title |  |
+| set_no_automatic_claims | Sets if the title should disallow automatic claims (meaning claims will only be added by script, and by pressed claims being inherited). | landed title |  |
+| set_title_name | sets the name (localization key) of the scoped title. The adjective will be constructed by adding '_adj' to the localisation key. Won't cause the prefix to change | landed title |  |
+| set_title_prefix | sets the prefix of the scoped title. Won't cause its name or adjective to change | landed title |  |
+| title_create_faction | the scoped landed title creates a faction of the specified type against the specified target, title_create_faction = { type = X target = Y } | landed title |  |
+| title_join_faction | the landed title in the scope joins the assigned faction | landed title |  |
+| title_leave_faction | the title in the scope leaves the assigned faction | landed title |  |
+| end_story | Ends a story and executes it's on_end effect, the story can no longer be accessed after this | story cycle |  |
+| make_story_owner | makes the character the new owner of the story | story cycle | character |
+| add_innovation | Add innovation to a culture | culture |  |
+| add_random_innovation | Add random available innovation = { add_random_innovation = culture_group_military/culture_group_civic/culture_group_regional/yes } | culture |  |
+| get_all_innovations_from | Discover all innovations from the target culture | culture | culture |
+| get_random_innovation_from | Get random available innovation from another culture | culture |  |
+| add_character_flag | Adds a character flag. X is the name of the flag and Y is a value or value interval "{ min max }". | character |  |
+| add_character_modifier | Add a modifier to a character | character |  |
+| add_courtier | Add the target character to the scope character's court | character | character |
+| add_diplomacy_lifestyle_perk_points | Adds lifestyle per points to the given character | character |  |
+| add_diplomacy_lifestyle_xp | Adds lifestyle XP to the given character. Can be used with lifestyles not currently focused on. | character |  |
+| add_dread | adds (or removes) dread to a character | character |  |
+| add_gold | adds gold to a character | character |  |
+| add_hook | Adds a hook on a character. Note: days/months/years optional (taken from hook type otherwise) and can be a value or an interval, secret required for hook types that require it. Does send a toast to the player if it's involved. | character |  |
+| add_hook_no_toast | Adds a hook on a character. Note: days/months/years optional (taken from hook type otherwise) and can be a value or an interval, secret required for hook types that require it. Does NOT send a toast to the player. | character |  |
+| add_intrigue_lifestyle_perk_points | Adds lifestyle per points to the given character | character |  |
+| add_intrigue_lifestyle_xp | Adds lifestyle XP to the given character | character |  |
+| add_joined_faction_discontent | add_joined_faction_discontent = X adds (or subtracts) discontent to the factions the scope character is in | character |  |
+| add_knows_of_killer | Adds the right hand side character as knowing of the killer of the scoped object | character | character |
+| add_learning_lifestyle_perk_points | Adds lifestyle per points to the given character | character |  |
+| add_learning_lifestyle_xp | Adds lifestyle XP to the given character | character |  |
+| add_martial_lifestyle_perk_points | Adds lifestyle per points to the given character | character |  |
+| add_martial_lifestyle_xp | Adds lifestyle XP to the given character | character |  |
+| add_opinion | Adds a temporary opinion modifier. X is a scripted modifier name. Y can be a value or a range "{ A B }" If no timeout are specified, the modifier's scripted default timeout will be used. | character |  |
+| add_perk | Adds the perk for this character | character |  |
+| add_piety | gives (or takes) piety to a character | character |  |
+| add_piety_experience | gives (or takes) piety experience to a character | character |  |
+| add_piety_level | increases (or decreases) the piety level of a character | character |  |
+| add_pressed_claim | gives a pressed claim to a character | character | landed title |
+| add_prestige | gives (or takes) prestige to a character | character |  |
+| add_prestige_experience | gives (or takes) prestige experience to a character | character |  |
+| add_prestige_level | increases (or decreases) the prestige level of a character | character |  |
+| add_realm_law | Adds the given law to the scoped character | character |  |
+| add_realm_law_skip_effects | Adds the given law to the scoped character. Skips the cost and the pass effect, and the revoke effects of the current law | character |  |
+| add_relation_flag | Adds a flag to an existing relation | character |  |
+| add_scheme_cooldown | Sets a scheme cooldown for the scope character towards = { target=target_character type=scheme_type days/weeks/months/years = duration } | character |  |
+| add_secret | Adds a secret | character |  |
+| add_stewardship_lifestyle_perk_points | Adds lifestyle per points to the given character | character |  |
+| add_stewardship_lifestyle_xp | Adds lifestyle XP to the given character | character |  |
+| add_stress | increases (or decreases) stress of a character | character |  |
+| add_targeting_factions_discontent | add_targeting_factions_discontent = X adds (or subtracts) discontent to all the factions that are targeting the scope character | character |  |
+| add_to_scheme | Adds a character as an agent to the scheme | character |  |
+| add_trait | Adds a trait to a character (the trait will not be added and no tooltip will be shown if the character isn't eligible for the trait, i.e. when already having the trait, having an opposing trait, not fulfilling the trait's is_potential trigger or being outside of the trait's range) | character |  |
+| add_trait_force_tooltip | Adds a trait to a character (if the add_trait effect would not add the trait - i.e. when already having the trait, having an opposing trait, not fulfilling the trait's is_potential trigger or being outside of the trait's range - a tooltip will be shown but the trait will not be added) | character |  |
+| add_truce_both_ways | Sets the both-way truce against the specified character 'character' specifies the target character 'override' says whether it should replace the previous truce even if shorter 'years / months / days' sets the duration of the truce 'result' specifies the result from the scope character's point of view ('white_peace' by default) 'casus_belli' sets the casus belli scope that caused the truce, mutually exclusive with 'name' 'name' sets a custom description. Dynamic description with the current scope 'war' sets the war that caused the truce, mutually exclusive with 'casus_belli' | character |  |
+| add_truce_one_way | Sets the truce against the specified character 'character' specifies the target character 'override' says whether it should replace the previous truce even if shorter 'years / months / days' sets the duration of the truce 'result' specifies the result from the scope character's point of view ('white_peace' by default) 'casus_belli' sets the casus belli scope that caused the truce, mutually exclusive with 'name' 'name' sets a custom description. Dynamic description with the current scope | character |  |
+| add_tyranny | adds (or removes) tyranny to (or from) a character | character |  |
+| add_unpressed_claim | gives an unpressed claim to a character | character | landed title |
+| add_visiting_courtier | Add the target character as the scope character's guest | character | character |
+| allow_alliance | Allows (previously broken) alliance with the target character | character | character |
+| allow_in_scheme | Allow the character to join the scheme as an agent | character |  |
+| apply_ai_vassal_obligation_liege_most_desired | Apply the new level for the most desired AI obligation level the liege in the contract wants | character |  |
+| apply_ai_vassal_obligation_vassal_most_desired | Apply the new level for the most desired AI obligation level the vassal in the contract wants | character |  |
+| assign_council_task | Assigns the target character to the council task | character |  |
+| assign_councillor_type | Assigns the target character to the first available council position of the type available. { type = council_position_type_key target = character_taking_the_position fire_on_actions = [yes] } | character |  |
+| banish | The character gets banished. | character |  |
+| becomes_independent | becomes and independent ruler | character |  |
+| break_alliance | Breaks the alliance with the target character | character | character |
+| cancel_truce_both_ways | Ends the truce against the specified character, and theirs against the scoped character. | character | character |
+| cancel_truce_one_way | Ends the truce against the specified character. | character | character |
+| change_current_weight | Change the current weight of the scoped character | character |  |
+| change_first_name | Change the first name of a character | character |  |
+| change_government | changes the government of a character | character |  |
+| change_liege | = { liege = 'Character that should become the new liege' change = 'previously created title_and_vassal_change', adds a liege change | character |  |
+| change_prison_type | Changes the charater's prison type. Scoped character is the prisoner. Accepts any static modifier (see also improson effect). | character |  |
+| change_target_weight | Change the target weight of the scoped character | character |  |
+| clear_forced_vote | Clears forced voting | character |  |
+| consume_banish_reasons | 'Consume' all banish reasons that the scoped character has on the target character. Until they get a new reason, they cannot banish the target again. | character | character |
+| consume_divorce_reasons | 'Consume' all divorce reason that the scoped character has on the target character. Until they get a new reason, they cannot divorce the target again. | character | character |
+| consume_execute_reasons | 'Consume' all execute reasons that the scoped character has on the target character. Until they get a new reason, they cannot execute the target again. | character | character |
+| consume_imprisonment_reasons | 'Consume' all imprisonment reasons that the scoped character has on the target character. Until they get a new reason, they cannot imprison the target again. | character | character |
+| consume_revoke_title_reason | 'Consume' 1 revoke title reason that the scoped character has on the target character. | character | character |
+| copy_inheritable_appearance_from | copies the inheritable appearance attributes (inheritable genes in the character's DNA string) from the target character to the scoped character | character | character |
+| create_alliance | Create an alliance between the scoped character and the target. The allied through characters determine who gets checked against for if the alliance should persist or not. | character |  |
+| create_cadet_branch | The scope character creates a cadet branch of the house he is in [yes\|no] | character |  |
+| create_faction | the scoped character creates a faction of the specified type against the specified target, create_faction = { type = X target = Y } | character |  |
+| create_story | Creates and initializes a story cycle with the current character as owner | create_story = {    type = story_type     save_scope_as/save_temporary_scope_as = scope_name # optional way to get a reference to the new story } | character |
+| death | kills a character, death = { killer = X death_reason = Y }, X is a character and Y is one of the death reason keys. Or death = natural which will pick a natural death reason to kill the character from. | character |  |
+| depose | The character gets deposed. | character |  |
+| destroy_title | Destroys a title | character | landed title |
+| end_pregnancy | end a pregnancy | character |  |
+| every_alert_creatable_title | Iterate through all titles that can be created by the character. (only for alerts) | character | landed title |
+| every_alert_usurpable_title | Iterate through all titles that can be usurped by the character. (only for alerts) | character | landed title |
+| every_ally | Iterate through all allies | character | character |
+| every_ancestor | Iterate through all the ancestors of the scope character up to 5 generations | character | character |
+| every_army | Iterate through all armies | character | army |
+| every_character_to_title_neighboring_and_across_water_barony | Scopes from a character to a neighboring barony (incl. across water, looking trough the de Jure lieges) | character | landed title |
+| every_character_to_title_neighboring_and_across_water_county | Scopes from a character to a neighboring county (incl. across water, looking trough the de Jure lieges) | character | landed title |
+| every_character_to_title_neighboring_and_across_water_duchy | Scopes from a character to a neighboring duchy (incl. across water, looking trough the de Jure lieges) | character | landed title |
+| every_character_to_title_neighboring_and_across_water_empire | Scopes from a character to a neighboring empire (incl. across water, looking trough the de Jure lieges) | character | landed title |
+| every_character_to_title_neighboring_and_across_water_kingdom | Scopes from a character to a neighboring kingdom (incl. across water, looking trough the de Jure lieges) | character | landed title |
+| every_character_to_title_neighboring_barony | Scopes from a character to a neighboring barony (looking trough the de Jure lieges) | character | landed title |
+| every_character_to_title_neighboring_county | Scopes from a character to a neighboring county (looking trough the de Jure lieges) | character | landed title |
+| every_character_to_title_neighboring_duchy | Scopes from a character to a neighboring duchy (looking trough the de Jure lieges) | character | landed title |
+| every_character_to_title_neighboring_empire | Scopes from a character to a neighboring empire (looking trough the de Jure lieges) | character | landed title |
+| every_character_to_title_neighboring_kingdom | Scopes from a character to a neighboring kingdom (looking trough the de Jure lieges) | character | landed title |
+| every_character_war | Wars of the scoped character | character | war |
+| every_child | Iterate through all children | character | character |
+| every_claim | Iterate through the titles of all claims held by a character; parameters: explicit = yes/no/all pressed = yes/no/all | character | landed title |
+| every_close_family_member | Iterate through all the close family [father, mother, siblings, children, grandparents] | character | character |
+| every_close_or_extended_family_member | Iterate through all the close and extended relatives [father, mother, siblings, children, grandparents, uncles/aunts, nephew/niece, cousins] | character | character |
+| every_concubine | Iterate through all concubines | character | character |
+| every_consort | Iterate through all consorts (concubines and spouses) | character | character |
+| every_councillor | Iterate through all councillors | character | character |
+| every_courtier | Iterate through all courtiers | character | character |
+| every_courtier_away | Iterate through all courtiers that are away | character | character |
+| every_courtier_or_guest | Iterate through all courtiers and guests (pool and foreign court guests) | character | character |
+| every_de_jure_claim | Iterate through all de jure claims for a character | character | landed title |
+| every_diplomacy_councillor | Iterate through all diplomacy-based councillors | character | character |
+| every_directly_owned_province | Iterate through all directly owned provinces | character | province |
+| every_election_title | Iterate through all titles the scoped character can vote on | character | landed title |
+| every_extended_family_member | Iterate through all the extended family [uncles/aunts, nephew/niece, cousins] | character | character |
+| every_foreign_court_guest | Iterate through all guests visiting from another court (in contrast to pool_guest they have a liege) | character | character |
+| every_former_concubine | Iterate through all former concubines. Not persisted past death | character | character |
+| every_former_concubinist | Iterate through all former concubinists. Not persisted past death | character | character |
+| every_former_spouse | Iterate through all former spouses | character | character |
+| every_general_councillor | Iterate through all councillors that are not related to a skill | character | character |
+| every_heir | Heirs of the scoped character | character | character |
+| every_heir_title | Iterate through all landed titles character is heir to | character | landed title |
+| every_heir_to_title | Iterate through all titles the scoped character is heir to | character | landed title |
+| every_held_title | Iterate through all held landed titles | character | landed title |
+| every_hired_mercenary | Iterate through all hired mercenary companies | character | mercenary company |
+| every_hooked_character | Iterate through all characters this character has a hook on | character | character |
+| every_hostile_raider | Iterate through anyone the character is hostile to due to their top-liege's realm having been raided | character | character |
+| every_intrigue_councillor | Iterate through all intrigue-based councillors | character | character |
+| every_knight | Iterate through all knights | character | character |
+| every_known_secret | Iterate through all secrets known by the character | character | secret |
+| every_learning_councillor | Iterate through all learning-based councillors | character | character |
+| every_liege_or_above | Iterate through all lieges above a character (skipping the character themselves) | character | character |
+| every_martial_councillor | Iterate through all martial-based councillors | character | character |
+| every_neighboring_and_across_water_realm_same_rank_owner | A sub-realm or realm bordering the scope character's realm (including across water) and has the same rank as the scope character (look for lieges of he owner of the land if necessary) | character | character |
+| every_neighboring_and_across_water_top_liege_realm | A realm with a different top liege neighboring the realm of the scope character's top liege (including across water); switches to the realm's top title. Can be based on borders a day or two out of date | character | landed title |
+| every_neighboring_and_across_water_top_liege_realm_owner | A realm with a different top liege neighboring the realm of the scope character's top liege (including across water); switches to the holder of the realm. Can be based on borders a day or two out of date | character | character |
+| every_neighboring_realm_same_rank_owner | A sub-realm or realm bordering the scope character's realm and has the same rank as the scope character (look for lieges of he owner of the land if necessary) | character | character |
+| every_neighboring_top_liege_realm | A realm with a different top liege neighboring the realm of the scope character's top liege; switches to the realm's top title. Can be based on borders a day or two out of date | character | landed title |
+| every_neighboring_top_liege_realm_owner | A realm with a different top liege neighboring the realm of the scope character's top liege; switches to the holder of the realm. Can be based on borders a day or two out of date | character | character |
+| every_owned_story | Iterate through all owned stories for a character | character | story cycle |
+| every_parent | Iterate through all (both) parents | character | character |
+| every_patroned_holy_order | Iterate through all holy orders that the scoped character is a patron of | character | holy order |
+| every_pinned_character | Iterate through characters this player has pinned | character | character |
+| every_pinning_character | Iterate through characters whose player has this character pinned | character | character |
+| every_player_heir | Iterate through player heirs, capped at the first 10 | character | character |
+| every_pool_guest | Iterate through all guests visiting the court from the pool (in contrast to foreign_court_guest they don't have a liege) | character | character |
+| every_potential_marriage_option | Iterate through all potential selectable marriage or betrohed options | character | character |
+| every_pretender_title | Iterate through all landed titles character is pretender to | character | landed title |
+| every_primary_war_enemy | Iterate through all primary war enemies | character | character |
+| every_prisoner | Iterate through all prisoners | character | character |
+| every_prowess_councillor | Iterate through all prowess-based councillors | character | character |
+| every_raid_target | Iterate through anyone the character is hostile to due to having raided them. Only returns top lieges | character | character |
+| every_realm_county | Iterate through all counties in the realm. Based on top liege | character | landed title |
+| every_realm_de_jure_duchy | Iterate through all de jure duchies that have at least one county in the realm. Based on top liege | character | landed title |
+| every_realm_de_jure_empire | Iterate through all de jure empire that have at least one county in the realm. Based on top liege | character | landed title |
+| every_realm_de_jure_kingdom | Iterate through all de jure kingdom that have at least one county in the realm. Based on top liege | character | landed title |
+| every_realm_province | Iterate through all realm provinces of a character | character | province |
+| every_relation | Iterate through scripted relations of a given type or multiple types, if someone is multiple relations they will only be in the list once | character | character |
+| every_scheme | Iterate through all schemes owned by the character | character | scheme |
+| every_secret | Iterate through all secrets of the character | character | secret |
+| every_sibling | Iterate through all siblings | character | character |
+| every_spouse | Iterate through all spouses | character | character |
+| every_spouse_candidate | Iterate through all the spouse candidates of a character. WARNING: THIS IS VERY SLOW DO NOT DO IT OFTEN. | character | character |
+| every_stewardship_councillor | Iterate through all stewardship-based councillors | character | character |
+| every_sub_realm_barony | Iterate through all baronies in sub-realm | character | landed title |
+| every_sub_realm_county | Iterate through all counties in sub-realm | character | landed title |
+| every_sub_realm_duchy | Iterate through all duchies in sub-realm | character | landed title |
+| every_sub_realm_empire | Iterate through all empires in sub-realm | character | landed title |
+| every_sub_realm_kingdom | Iterate through all kingdoms in sub-realm | character | landed title |
+| every_sub_realm_title | Iterate through all titles in sub-realm | character | landed title |
+| every_targeting_faction | Iterate through all factions targeting the scope character | character | faction |
+| every_targeting_scheme | Iterate through all schemes targeting the character | character | scheme |
+| every_targeting_secret | Iterate through all secrets that target the specified scope | character | secret |
+| every_traveling_family_member | Iterate though all characters that should travel with the scoped one (when moving between courts for instance); includes the scoped character | character | character |
+| every_truce_holder | Iterate through all characters that have a truce on this character | character | character |
+| every_truce_target | Iterate through all characters this character has a truce on | character | character |
+| every_unspent_known_secret | Iterate through all unspent secrets known by the character | character | secret |
+| every_vassal | Iterate through all DIRECT vassals | character | character |
+| every_vassal_or_below | Iterate through ALL vassals, not just direct vassals | character | character |
+| every_war_ally | Iterate through all direct war allies | character | character |
+| every_war_enemy | Iterate through all direct war enemies | character | character |
+| execute_decision | Execute the specified decision for the scoped character | character |  |
+| finish_council_task | The councillor finish the current assigned task successfully. | character |  |
+| fire_councillor | The scope character fires the target character form teh council. | character | character |
+| forbid_from_scheme | Forbid the scope character from joining the target scheme as an agent (and kick the character out if already in the scheme) | character |  |
+| force_add_to_scheme | Adds a character as an agent to the scheme and forces them to stay force_add_to_scheme = {    scheme = target_Scheme     days/months/years = duration } |  |  |
+| force_vote_as | Forces the character to vote the same as the target | character |  |
+| get_title | gives a title to a character | character | landed title |
+| give_nickname | Give a nickname to this character | character |  |
+| imprison | Imprisons the target character as this character's prisoner, imprison = { target = X reason = Y type = Z }, X is a character, Y is a flag, Z is a static modifier | character |  |
+| join_faction | the character in the scope joins the assigned faction | character |  |
+| join_faction_forced | the character in the scope is forced to join a faction by a character for a defined time, | character |  |
+| join_faction_skip_check | the character in the scope joins the assigned faction skiping the can_character_join trigger | character |  |
+| leave_faction | the charcter in the scope leaves the assigned faction | character |  |
+| make_claim_strong | makes a claim strong (character adds the claim if not having it already) | character | landed title |
+| make_claim_weak | makes a claim weak (character adds the claim if not having it already) | character | landed title |
+| make_concubine | Makes the target character a concubine of the scope character, the target should not be imprisoned | character | character |
+| make_pregnant | makes a character pregnant | character |  |
+| make_trait_active | Activates an inactive trait. Tooltip will not be shown if the character cannot have the trait. | character |  |
+| make_trait_active_force_tooltip | Activates an inactive trait. Tooltip will be shown even if the character cannot have the trait. | character |  |
+| make_trait_inactive | Makes a current trait of a character inactive. Tooltip will not be shown if the character doesn't have the trait. | character |  |
+| make_trait_inactive_force_tooltip | Makes a current trait of a character inactive. Tooltip will be shown even if the character doesn't have the trait. | character |  |
+| make_unprunable | The scope character will no longer be prunable after their death. Use with care, as this will make everyone related to them unprunable too. So you should only use this if someone absolutely *needs* to stick around several years after their death. Example: make_unprunable = yes | character |  |
+| marry | Marries the scoped character to the target character | character | character |
+| marry_matrilineal | Marries the scoped character to the target character matrilineally | character | character |
+| move_to_pool | The scoped character (courtier or guest) leaves their current court and moves into the pool | character |  |
+| move_to_pool_at | The scoped character (courtier/guest/pool character) leaves their current court (if any) and moves into the pool of the specified province | character | province |
+| ordered_alert_creatable_title | Iterate through all titles that can be created by the character. (only for alerts) | character | landed title |
+| ordered_alert_usurpable_title | Iterate through all titles that can be usurped by the character. (only for alerts) | character | landed title |
+| ordered_ally | Iterate through all allies | character | character |
+| ordered_ancestor | Iterate through all the ancestors of the scope character up to 5 generations | character | character |
+| ordered_army | Iterate through all armies | character | army |
+| ordered_character_to_title_neighboring_and_across_water_barony | Scopes from a character to a neighboring barony (incl. across water, looking trough the de Jure lieges) | character | landed title |
+| ordered_character_to_title_neighboring_and_across_water_county | Scopes from a character to a neighboring county (incl. across water, looking trough the de Jure lieges) | character | landed title |
+| ordered_character_to_title_neighboring_and_across_water_duchy | Scopes from a character to a neighboring duchy (incl. across water, looking trough the de Jure lieges) | character | landed title |
+| ordered_character_to_title_neighboring_and_across_water_empire | Scopes from a character to a neighboring empire (incl. across water, looking trough the de Jure lieges) | character | landed title |
+| ordered_character_to_title_neighboring_and_across_water_kingdom | Scopes from a character to a neighboring kingdom (incl. across water, looking trough the de Jure lieges) | character | landed title |
+| ordered_character_to_title_neighboring_barony | Scopes from a character to a neighboring barony (looking trough the de Jure lieges) | character | landed title |
+| ordered_character_to_title_neighboring_county | Scopes from a character to a neighboring county (looking trough the de Jure lieges) | character | landed title |
+| ordered_character_to_title_neighboring_duchy | Scopes from a character to a neighboring duchy (looking trough the de Jure lieges) | character | landed title |
+| ordered_character_to_title_neighboring_empire | Scopes from a character to a neighboring empire (looking trough the de Jure lieges) | character | landed title |
+| ordered_character_to_title_neighboring_kingdom | Scopes from a character to a neighboring kingdom (looking trough the de Jure lieges) | character | landed title |
+| ordered_character_war | Wars of the scoped character | character | war |
+| ordered_child | Iterate through all children | character | character |
+| ordered_claim | Iterate through the titles of all claims held by a character; parameters: explicit = yes/no/all pressed = yes/no/all | character | landed title |
+| ordered_close_family_member | Iterate through all the close family [father, mother, siblings, children, grandparents] | character | character |
+| ordered_close_or_extended_family_member | Iterate through all the close and extended relatives [father, mother, siblings, children, grandparents, uncles/aunts, nephew/niece, cousins] | character | character |
+| ordered_concubine | Iterate through all concubines | character | character |
+| ordered_consort | Iterate through all consorts (concubines and spouses) | character | character |
+| ordered_councillor | Iterate through all councillors | character | character |
+| ordered_courtier | Iterate through all courtiers | character | character |
+| ordered_courtier_away | Iterate through all courtiers that are away | character | character |
+| ordered_courtier_or_guest | Iterate through all courtiers and guests (pool and foreign court guests) | character | character |
+| ordered_de_jure_claim | Iterate through all de jure claims for a character | character | landed title |
+| ordered_diplomacy_councillor | Iterate through all diplomacy-based councillors | character | character |
+| ordered_directly_owned_province | Iterate through all directly owned provinces | character | province |
+| ordered_election_title | Iterate through all titles the scoped character can vote on | character | landed title |
+| ordered_extended_family_member | Iterate through all the extended family [uncles/aunts, nephew/niece, cousins] | character | character |
+| ordered_foreign_court_guest | Iterate through all guests visiting from another court (in contrast to pool_guest they have a liege) | character | character |
+| ordered_former_concubine | Iterate through all former concubines. Not persisted past death | character | character |
+| ordered_former_concubinist | Iterate through all former concubinists. Not persisted past death | character | character |
+| ordered_former_spouse | Iterate through all former spouses | character | character |
+| ordered_general_councillor | Iterate through all councillors that are not related to a skill | character | character |
+| ordered_heir | Heirs of the scoped character | character | character |
+| ordered_heir_title | Iterate through all landed titles character is heir to | character | landed title |
+| ordered_heir_to_title | Iterate through all titles the scoped character is heir to | character | landed title |
+| ordered_held_title | Iterate through all held landed titles | character | landed title |
+| ordered_hired_mercenary | Iterate through all hired mercenary companies | character | mercenary company |
+| ordered_hooked_character | Iterate through all characters this character has a hook on | character | character |
+| ordered_hostile_raider | Iterate through anyone the character is hostile to due to their top-liege's realm having been raided | character | character |
+| ordered_intrigue_councillor | Iterate through all intrigue-based councillors | character | character |
+| ordered_knight | Iterate through all knights | character | character |
+| ordered_known_secret | Iterate through all secrets known by the character | character | secret |
+| ordered_learning_councillor | Iterate through all learning-based councillors | character | character |
+| ordered_liege_or_above | Iterate through all lieges above a character (skipping the character themselves) | character | character |
+| ordered_martial_councillor | Iterate through all martial-based councillors | character | character |
+| ordered_neighboring_and_across_water_realm_same_rank_owner | A sub-realm or realm bordering the scope character's realm (including across water) and has the same rank as the scope character (look for lieges of he owner of the land if necessary) | character | character |
+| ordered_neighboring_and_across_water_top_liege_realm | A realm with a different top liege neighboring the realm of the scope character's top liege (including across water); switches to the realm's top title. Can be based on borders a day or two out of date | character | landed title |
+| ordered_neighboring_and_across_water_top_liege_realm_owner | A realm with a different top liege neighboring the realm of the scope character's top liege (including across water); switches to the holder of the realm. Can be based on borders a day or two out of date | character | character |
+| ordered_neighboring_realm_same_rank_owner | A sub-realm or realm bordering the scope character's realm and has the same rank as the scope character (look for lieges of he owner of the land if necessary) | character | character |
+| ordered_neighboring_top_liege_realm | A realm with a different top liege neighboring the realm of the scope character's top liege; switches to the realm's top title. Can be based on borders a day or two out of date | character | landed title |
+| ordered_neighboring_top_liege_realm_owner | A realm with a different top liege neighboring the realm of the scope character's top liege; switches to the holder of the realm. Can be based on borders a day or two out of date | character | character |
+| ordered_owned_story | Iterate through all owned stories for a character | character | story cycle |
+| ordered_parent | Iterate through all (both) parents | character | character |
+| ordered_patroned_holy_order | Iterate through all holy orders that the scoped character is a patron of | character | holy order |
+| ordered_pinned_character | Iterate through characters this player has pinned | character | character |
+| ordered_pinning_character | Iterate through characters whose player has this character pinned | character | character |
+| ordered_player_heir | Iterate through player heirs, capped at the first 10 | character | character |
+| ordered_pool_guest | Iterate through all guests visiting the court from the pool (in contrast to foreign_court_guest they don't have a liege) | character | character |
+| ordered_potential_marriage_option | Iterate through all potential selectable marriage or betrohed options | character | character |
+| ordered_pretender_title | Iterate through all landed titles character is pretender to | character | landed title |
+| ordered_primary_war_enemy | Iterate through all primary war enemies | character | character |
+| ordered_prisoner | Iterate through all prisoners | character | character |
+| ordered_prowess_councillor | Iterate through all prowess-based councillors | character | character |
+| ordered_raid_target | Iterate through anyone the character is hostile to due to having raided them. Only returns top lieges | character | character |
+| ordered_realm_county | Iterate through all counties in the realm. Based on top liege | character | landed title |
+| ordered_realm_de_jure_duchy | Iterate through all de jure duchies that have at least one county in the realm. Based on top liege | character | landed title |
+| ordered_realm_de_jure_empire | Iterate through all de jure empire that have at least one county in the realm. Based on top liege | character | landed title |
+| ordered_realm_de_jure_kingdom | Iterate through all de jure kingdom that have at least one county in the realm. Based on top liege | ordered_realm_de_jure_kingdom = { limit = {  } order_by = script_value position = int min = int max = script_value check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  } | character |
+| ordered_realm_province | Iterate through all realm provinces of a character | character | province |
+| ordered_relation | Iterate through scripted relations of a given type or multiple types, if someone is multiple relations they will only be in the list once | character | character |
+| ordered_scheme | Iterate through all schemes owned by the character | character | scheme |
+| ordered_secret | Iterate through all secrets of the character | character | secret |
+| ordered_sibling | Iterate through all siblings | character | character |
+| ordered_spouse | Iterate through all spouses | character | character |
+| ordered_spouse_candidate | Iterate through all the spouse candidates of a character. WARNING: THIS IS VERY SLOW DO NOT DO IT OFTEN. | character | character |
+| ordered_stewardship_councillor | Iterate through all stewardship-based councillors | character | character |
+| ordered_sub_realm_barony | Iterate through all baronies in sub-realm | character | landed title |
+| ordered_sub_realm_county | Iterate through all counties in sub-realm | character | landed title |
+| ordered_sub_realm_duchy | Iterate through all duchies in sub-realm | character | landed title |
+| ordered_sub_realm_empire | Iterate through all empires in sub-realm | character | landed title |
+| ordered_sub_realm_kingdom | Iterate through all kingdoms in sub-realm | character | landed title |
+| ordered_sub_realm_title | Iterate through all titles in sub-realm | character | landed title |
+| ordered_targeting_faction | Iterate through all factions targeting the scope character | character | faction |
+| ordered_targeting_scheme | Iterate through all schemes targeting the character | character | scheme |
+| ordered_targeting_secret | Iterate through all secrets that target the specified scope | character | secret |
+| ordered_traveling_family_member | Iterate though all characters that should travel with the scoped one (when moving between courts for instance); includes the scoped character | character | character |
+| ordered_truce_holder | Iterate through all characters that have a truce on this character | character | character |
+| ordered_truce_target | Iterate through all characters this character has a truce on | character | character |
+| ordered_unspent_known_secret | Iterate through all unspent secrets known by the character | character | secret |
+| ordered_vassal | Iterate through all DIRECT vassals | character | character |
+| ordered_vassal_or_below | Iterate through ALL vassals, not just direct vassals | character | character |
+| ordered_war_ally | Iterate through all direct war allies | character | character |
+| ordered_war_enemy | Iterate through all direct war enemies | character | character |
+| pay_long_term_gold | the scope character pays gold to the target character, pay_gold = { target = X gold = Y } (AI budget category long term) | character |  |
+| pay_long_term_income | the scope character immediately pays gold corresponding to their income to the target character, pay_income = { target = X days/months/years = Y } (AI budget long term) | character |  |
+| pay_short_term_gold | the scope character pays gold to the target character, pay_gold = { target = X gold = Y } (AI budget category short term) | character |  |
+| pay_short_term_income | the scope character immediately pays gold corresponding to their income to the target character, pay_income = { target = X days/months/years = Y } (AI budget short term) | character |  |
+| play_music_cue | Plays the specified music cue. | character |  |
+| random_alert_creatable_title | Iterate through all titles that can be created by the character. (only for alerts) | character | landed title |
+| random_alert_usurpable_title | Iterate through all titles that can be usurped by the character. (only for alerts) | character | landed title |
+| random_ally | Iterate through all allies | character | character |
+| random_ancestor | Iterate through all the ancestors of the scope character up to 5 generations | character | character |
+| random_army | Iterate through all armies | character | army |
+| random_character_to_title_neighboring_and_across_water_barony | Scopes from a character to a neighboring barony (incl. across water, looking trough the de Jure lieges) | character | landed title |
+| random_character_to_title_neighboring_and_across_water_county | Scopes from a character to a neighboring county (incl. across water, looking trough the de Jure lieges) | character | landed title |
+| random_character_to_title_neighboring_and_across_water_duchy | Scopes from a character to a neighboring duchy (incl. across water, looking trough the de Jure lieges) | character | landed title |
+| random_character_to_title_neighboring_and_across_water_empire | Scopes from a character to a neighboring empire (incl. across water, looking trough the de Jure lieges) | character | landed title |
+| random_character_to_title_neighboring_and_across_water_kingdom | Scopes from a character to a neighboring kingdom (incl. across water, looking trough the de Jure lieges) | character | landed title |
+| random_character_to_title_neighboring_barony | Scopes from a character to a neighboring barony (looking trough the de Jure lieges) | character | landed title |
+| random_character_to_title_neighboring_county | Scopes from a character to a neighboring county (looking trough the de Jure lieges) | character | landed title |
+| random_character_to_title_neighboring_duchy | Scopes from a character to a neighboring duchy (looking trough the de Jure lieges) | character | landed title |
+| random_character_to_title_neighboring_empire | Scopes from a character to a neighboring empire (looking trough the de Jure lieges) | character | landed title |
+| random_character_to_title_neighboring_kingdom | Scopes from a character to a neighboring kingdom (looking trough the de Jure lieges) | character | landed title |
+| random_character_war | Wars of the scoped character | character | war |
+| random_child | Iterate through all children | character | character |
+| random_claim | Iterate through the titles of all claims held by a character; parameters: explicit = yes/no/all pressed = yes/no/all | character | landed title |
+| random_close_family_member | Iterate through all the close family [father, mother, siblings, children, grandparents] | character | character |
+| random_close_or_extended_family_member | Iterate through all the close and extended relatives [father, mother, siblings, children, grandparents, uncles/aunts, nephew/niece, cousins] | character | character |
+| random_concubine | Iterate through all concubines | character | character |
+| random_consort | Iterate through all consorts (concubines and spouses) | character | character |
+| random_councillor | Iterate through all councillors | character | character |
+| random_courtier | Iterate through all courtiers | character | character |
+| random_courtier_away | Iterate through all courtiers that are away | character | character |
+| random_courtier_or_guest | Iterate through all courtiers and guests (pool and foreign court guests) | character | character |
+| random_de_jure_claim | Iterate through all de jure claims for a character | character | landed title |
+| random_diplomacy_councillor | Iterate through all diplomacy-based councillors | character | character |
+| random_directly_owned_province | Iterate through all directly owned provinces | character | province |
+| random_election_title | Iterate through all titles the scoped character can vote on | character | landed title |
+| random_extended_family_member | Iterate through all the extended family [uncles/aunts, nephew/niece, cousins] | character | character |
+| random_foreign_court_guest | Iterate through all guests visiting from another court (in contrast to pool_guest they have a liege) | character | character |
+| random_former_concubine | Iterate through all former concubines. Not persisted past death | character | character |
+| random_former_concubinist | Iterate through all former concubinists. Not persisted past death | character | character |
+| random_former_spouse | Iterate through all former spouses | character | character |
+| random_general_councillor | Iterate through all councillors that are not related to a skill | character | character |
+| random_heir | Heirs of the scoped character | character | character |
+| random_heir_title | Iterate through all landed titles character is heir to | character | landed title |
+| random_heir_to_title | Iterate through all titles the scoped character is heir to | character | landed title |
+| random_held_title | Iterate through all held landed titles | character | landed title |
+| random_hired_mercenary | Iterate through all hired mercenary companies | character | mercenary company |
+| random_hooked_character | Iterate through all characters this character has a hook on | character | character |
+| random_hostile_raider | Iterate through anyone the character is hostile to due to their top-liege's realm having been raided | character | character |
+| random_intrigue_councillor | Iterate through all intrigue-based councillors | character | character |
+| random_knight | Iterate through all knights | character | character |
+| random_known_secret | Iterate through all secrets known by the character | character | secret |
+| random_learning_councillor | Iterate through all learning-based councillors | character | character |
+| random_liege_or_above | Iterate through all lieges above a character (skipping the character themselves) | character | character |
+| random_martial_councillor | Iterate through all martial-based councillors | character | character |
+| random_neighboring_and_across_water_realm_same_rank_owner | A sub-realm or realm bordering the scope character's realm (including across water) and has the same rank as the scope character (look for lieges of he owner of the land if necessary) | character | character |
+| random_neighboring_and_across_water_top_liege_realm | A realm with a different top liege neighboring the realm of the scope character's top liege (including across water); switches to the realm's top title. Can be based on borders a day or two out of date | character | landed title |
+| random_neighboring_and_across_water_top_liege_realm_owner | A realm with a different top liege neighboring the realm of the scope character's top liege (including across water); switches to the holder of the realm. Can be based on borders a day or two out of date | character | character |
+| random_neighboring_realm_same_rank_owner | A sub-realm or realm bordering the scope character's realm and has the same rank as the scope character (look for lieges of he owner of the land if necessary) | character | character |
+| random_neighboring_top_liege_realm | A realm with a different top liege neighboring the realm of the scope character's top liege; switches to the realm's top title. Can be based on borders a day or two out of date | character | landed title |
+| random_neighboring_top_liege_realm_owner | A realm with a different top liege neighboring the realm of the scope character's top liege; switches to the holder of the realm. Can be based on borders a day or two out of date | character | character |
+| random_owned_story | Iterate through all owned stories for a character | character | story cycle |
+| random_parent | Iterate through all (both) parents | character | character |
+| random_patroned_holy_order | Iterate through all holy orders that the scoped character is a patron of | character | holy order |
+| random_pinned_character | Iterate through characters this player has pinned | character | character |
+| random_pinning_character | Iterate through characters whose player has this character pinned | character | character |
+| random_player_heir | Iterate through player heirs, capped at the first 10 | character | character |
+| random_pool_guest | Iterate through all guests visiting the court from the pool (in contrast to foreign_court_guest they don't have a liege) | character | character |
+| random_potential_marriage_option | Iterate through all potential selectable marriage or betrohed options | character | character |
+| random_pretender_title | Iterate through all landed titles character is pretender to | character | landed title |
+| random_primary_war_enemy | Iterate through all primary war enemies | character | character |
+| random_prisoner | Iterate through all prisoners | character | character |
+| random_prowess_councillor | Iterate through all prowess-based councillors | character | character |
+| random_raid_target | Iterate through anyone the character is hostile to due to having raided them. Only returns top lieges | character | character |
+| random_realm_county | Iterate through all counties in the realm. Based on top liege | character | landed title |
+| random_realm_de_jure_duchy | Iterate through all de jure duchies that have at least one county in the realm. Based on top liege | character | landed title |
+| random_realm_de_jure_empire | Iterate through all de jure empire that have at least one county in the realm. Based on top liege | character | landed title |
+| random_realm_de_jure_kingdom | Iterate through all de jure kingdom that have at least one county in the realm. Based on top liege | character | landed title |
+| random_realm_province | Iterate through all realm provinces of a character | character | province |
+| random_relation | Iterate through scripted relations of a given type or multiple types, if someone is multiple relations they will only be in the list once | character | character |
+| random_scheme | Iterate through all schemes owned by the character | character | scheme |
+| random_secret | Iterate through all secrets of the character | character | secret |
+| random_sibling | Iterate through all siblings | character | character |
+| random_spouse | Iterate through all spouses | character | character |
+| random_spouse_candidate | Iterate through all the spouse candidates of a character. WARNING: THIS IS VERY SLOW DO NOT DO IT OFTEN. | character | character |
+| random_stewardship_councillor | Iterate through all stewardship-based councillors | character | character |
+| random_sub_realm_barony | Iterate through all baronies in sub-realm | character | landed title |
+| random_sub_realm_county | Iterate through all counties in sub-realm | character | landed title |
+| random_sub_realm_duchy | Iterate through all duchies in sub-realm | character | landed title |
+| random_sub_realm_empire | Iterate through all empires in sub-realm | character | landed title |
+| random_sub_realm_kingdom | Iterate through all kingdoms in sub-realm | character | landed title |
+| random_sub_realm_title | Iterate through all titles in sub-realm | character | landed title |
+| random_targeting_faction | Iterate through all factions targeting the scope character | character | faction |
+| random_targeting_scheme | Iterate through all schemes targeting the character | character | scheme |
+| random_targeting_secret | Iterate through all secrets that target the specified scope | character | secret |
+| random_traveling_family_member | Iterate though all characters that should travel with the scoped one (when moving between courts for instance); includes the scoped character | character | character |
+| random_truce_holder | Iterate through all characters that have a truce on this character | character | character |
+| random_truce_target | Iterate through all characters this character has a truce on | character | character |
+| random_unspent_known_secret | Iterate through all unspent secrets known by the character | character | secret |
+| random_vassal | Iterate through all DIRECT vassals | character | character |
+| random_vassal_or_below | Iterate through ALL vassals, not just direct vassals | character | character |
+| random_war_ally | Iterate through all direct war allies | character | character |
+| random_war_enemy | Iterate through all direct war enemies | character | character |
+| recalculate_scripted_relation | Recalculates the effect of a scripted relation | character |  |
+| recruit_courtier | Recruits the target to become a courtier. | character | character |
+| refund_all_perks | Refunds all perks of the character. Example: refund_all_perks = yes | character |  |
+| refund_perks | Refunds all perks of the RHS lifestyle. Example: refund_perks = intrigue_lifestyle | character |  |
+| release_from_prison | releases the character from the prison, imprison = X, X is a boolean value | character |  |
+| remove_all_character_modifier_instances | Remove all instances of a modifier from a character | character |  |
+| remove_character_flag | removes a character flag | character |  |
+| remove_character_modifier | Remove a modifier from a character | character |  |
+| remove_claim | removes an explicit (not from a living parent/grand parent) claim | character | landed title |
+| remove_concubine | Removes the target character as a concubine of the scope character | character | character |
+| remove_courtier_or_guest | Removes the target character (guest or courtier) from the scope character's court | character | character |
+| remove_decision_cooldown | Remove the cooldown on taking a decision for the scoped character | character |  |
+| remove_hook | Removes a hook on a character, remove_hook = { target = X, type = Y }, if type is specified, the hook will only be removed if it is of that type | character |  |
+| remove_interaction_cooldown | Remove the cooldown on using an interaction for the scoped character | character |  |
+| remove_interaction_cooldown_against | Remove the cooldown on using an interaction against the target character for the scoped character | character |  |
+| remove_long_term_gold | removes gold from a character (AI's long term budget) | character |  |
+| remove_nickname | Removes any nickname from the current character [yes\|no] | character |  |
+| remove_opinion | Removes a temporary opinion modifier, remove_opinion = { target = X modifier = Y single = Z (no by default) } X is a character, Y is the opinion modifier, Z tells whether to remove all instances of the modifier or just one | character |  |
+| remove_perk | Remove the perk for this character | character |  |
+| remove_realm_law | Removes the given law from the scoped character. This will leave the law group empty, so only do this if you're getting rid of a law group | character |  |
+| remove_relation_best_friend | Removes scripted relationship | character | character |
+| remove_relation_bully | Removes scripted relationship | character | character |
+| remove_relation_court_physician | Removes scripted relationship | character | character |
+| remove_relation_crush | Removes scripted relationship | character | character |
+| remove_relation_flag | Removed a flag from an existing relation flag = flag_name (declared in scripted_relation) target = other_character relation = scripted_relation | character |  |
+| remove_relation_friend | Removes scripted relationship | character | character |
+| remove_relation_guardian | Removes scripted relationship | character | character |
+| remove_relation_intrigue_mentor | Removes scripted relationship | character | character |
+| remove_relation_intrigue_student | Removes scripted relationship | character | character |
+| remove_relation_lover | Removes scripted relationship | character | character |
+| remove_relation_mentor | Removes scripted relationship | character | character |
+| remove_relation_nemesis | Removes scripted relationship | character | character |
+| remove_relation_oaf | Removes scripted relationship | character | character |
+| remove_relation_potential_friend | Removes scripted relationship | character | character |
+| remove_relation_potential_lover | Removes scripted relationship | character | character |
+| remove_relation_potential_rival | Removes scripted relationship | character | character |
+| remove_relation_rival | Removes scripted relationship | character | character |
+| remove_relation_soldier_friend | Removes scripted relationship | character | character |
+| remove_relation_soulmate | Removes scripted relationship | character | character |
+| remove_relation_student | Removes scripted relationship | character | character |
+| remove_relation_victim | Removes scripted relationship | character | character |
+| remove_relation_ward | Removes scripted relationship | character | character |
+| remove_scheme_cooldown_against | Remove the cooldown on using a scheme against the target character for the scoped character | character |  |
+| remove_short_term_gold | removes gold from a character (AI's short term budget) | character |  |
+| remove_trait | Removes a trait from a character. Tooltip will not be shown if the character doesn't have the trait. | character |  |
+| remove_trait_force_tooltip | Removes a trait from a character. Tooltip will be shown even if the character doesn't have the trait. | character |  |
+| reset_beneficiary | The target character stops having a beneficiary | character |  |
+| return_to_court | Returns the scope character to the employers court. | character |  |
+| reverse_add_opinion | Adds a temporary reverse opinion modifier. X is a scripted modifier name. Y can be a value or a range "{ A B }" If no timeout are specified, the modifier's scripted default timeout will be used. | character |  |
+| scriptedtests_recalculate_character_modifier | Recalculates the modifier of the scoped character | character |  |
+| scriptedtests_recalculate_succession | Recalculates the line of succession of the scoped character | character |  |
+| send_interface_message | Sends a message to the player playing the character in the scope and then executes any effects inside. For the message text and tooltip, $EFFECT$ contains the text description of the effects in the past tense. And $DESC$ contains the text from the desc field. | character |  |
+| send_interface_toast | Sends a message to the player playing the character in the scope and then executes any effects inside. For the message text and tooltip, $EFFECT$ contains the text description of the effects in the past tense. And $DESC$ contains the text from the desc field. send_interface_toast = {    type = message_type # default: send_interface_toast     title = LOCALIZATION # optional, otherwise takes it from the message type     desc = LOCALIZATION # optional, otherwise takes it from the message type     tooltip = LOCALIZATION # optional, otherwise takes it from the message type     left_icon = scope:recipient # optional, character or title     right_icon = scope:the_title # optional, character or title     goto = scope:the_title # optional, character, barony title, province will add a goto button     # optional effects...     add_dread = 5     scope:someone = { add_gold = 5 } } |  |  |
+| set_absolute_country_control | Sets if this character has absolute country control, unlock_character_movement = yes/no/boolean event target | character |  |
+| set_beneficiary | The target character becomes the beneficiary of the scoped character. set_beneficiary = some character | character | character |
+| set_character_faith | Changes what faith a character has executing the effects for it. For history setup use 'set_character_faith_history' instead. | character | faith |
+| set_character_faith_history | Changes what faith a character has NOT executing the effects for it. USE ONLY IN HISOTRY SETUP! | character | faith |
+| set_character_faith_with_conversion | Changes what faith a character has, as if they used the faith-view interaction (minus the piety cost). So vassals who'd accept will get converted, as will capitals | character | faith |
+| set_child_of_concubine_on_pregnancy | Sets the child to be (or not be) a child of a concubine during pregnancy | character |  |
+| set_council_task | Sets the task of the scope councillor { task_type = council_position_type_key target = for_targeted_tasks } | character |  |
+| set_culture | Set the culture for this character | character | culture |
+| set_culture_same_as | Sets the culture of the character to be the same as the culture of the target | character | character |
+| set_death_reason | sets the death reason and the killer of a dead character, set_death_reason = { killer = X death_reason = Y }, both parameters are optional | character |  |
+| set_default_education | Set the default education focus for this character | character |  |
+| set_designated_heir | Sets the given character as designated heir | character | character |
+| set_employer | Add the scope character to the target character's court | character | character |
+| set_father | sets the father of a character | character | character |
+| set_focus | Set the focus for this character | character |  |
+| set_house | Sets the dynasty house of the character | character | dynasty house |
+| set_immortal_age | Changes what age the character became immortal at. Only works if already immortal | character |  |
+| set_killer_public | Sets the scoped character's killer as being publicly known | character |  |
+| set_known_bastard_on_pregnancy | Sets the child to a known or unknown bastard during pregnancy | character |  |
+| set_num_pregnancy_children | Set the number of children | character |  |
+| set_override_designated_winner | The scoped character will put their beneficiary on the throne if they're the #1 participant if this is called with 'yes'. Call with 'no' to turn it off again. set_override_designate_winner = yes/no | character |  |
+| set_player_character | The scope character's player will now play as the target character. Scope must be player-controlled. Target cannot be player-controlled. Example: make_unprunable = yes | character | character |
+| set_pregnancy_assumed_father | Set the assumed father of the pregnancy | character | character |
+| set_primary_spouse | Set the primary spouse of a character | character | character |
+| set_primary_title_to | Sets the primary title for a character | character | landed title |
+| set_real_father | Changes the real father of the character scope | character | character |
+| set_realm_capital | Set a new realm capital | character | landed title |
+| set_relation_best_friend | Sets scripted relationship | character | character |
+| set_relation_bully | Sets scripted relationship | character | character |
+| set_relation_court_physician | Sets scripted relationship | character | character |
+| set_relation_crush | Sets scripted relationship | character | character |
+| set_relation_friend | Sets scripted relationship | character | character |
+| set_relation_guardian | Sets scripted relationship | character | character |
+| set_relation_intrigue_mentor | Sets scripted relationship | character | character |
+| set_relation_intrigue_student | Sets scripted relationship | character | character |
+| set_relation_lover | Sets scripted relationship | character | character |
+| set_relation_mentor | Sets scripted relationship | character | character |
+| set_relation_nemesis | Sets scripted relationship | character | character |
+| set_relation_oaf | Sets scripted relationship | character | character |
+| set_relation_potential_friend | Sets scripted relationship | character | character |
+| set_relation_potential_lover | Sets scripted relationship | character | character |
+| set_relation_potential_rival | Sets scripted relationship | character | character |
+| set_relation_rival | Sets scripted relationship | character | character |
+| set_relation_soldier_friend | Sets scripted relationship | character | character |
+| set_relation_soulmate | Sets scripted relationship | character | character |
+| set_relation_student | Sets scripted relationship | character | character |
+| set_relation_victim | Sets scripted relationship | character | character |
+| set_relation_ward | Sets scripted relationship | character | character |
+| set_sexuality | Sets the sexuality of the character | character |  |
+| set_to_lowborn | Set the character to lowborn | character |  |
+| set_vassal_contract_modification_blocked | Blocks the vassal contract from being modified with regards to being checked by 'vassal_contract_is_blocked_from_modification' | character |  |
+| spawn_army | Spawns an army for this character. If the character is not at war, the regiments will be created, but the army will not be spawned. | character |  |
+| start_default_task | Force the Councillor to revert to the default task. Any relevant percentage progress will be lost (even if the councillor was performing the default task already). | character |  |
+| start_scheme | starts a scheme = { type = X target = Y } | character |  |
+| start_war | Starts a war. X is a casus belli type, Y is the target character, Z i the (optional) claimant, W1, W2.... are targeted titles. If there are no title targets, the effect will pick one of possible title targets. | character |  |
+| stress_impact | Stress impact according to specified traits (trait = value), use base = value for a base value that's always added | character |  |
+| use_hook | Uses a hook a character has (removes if weak, puts on cooldown if strong) | character | character |
+| vassal_contract_decrease_obligation_level | decrease the obligation level of the scoped character's vassal contract | character |  |
+| vassal_contract_increase_obligation_level | increase the obligation level of the scoped character's vassal contract | character |  |
+| vassal_contract_set_obligation_level | change the obligation level of the scoped character's vassal contract | character |  |
+| visit_court_of | Add the scope character as the target character's guest | character | character |
+| add_faction_discontent | add_faction_discontent = X adds (or subtracts) discontent to the scope faction | faction |  |
+| destroy_faction | the scope faction is destoryed [yes\|no] | faction |  |
+| every_faction_county_member | Iterate through all faction county members | faction | landed title |
+| every_faction_member | Iterate through all faction character members | faction | character |
+| faction_remove_war | Removes the war currently associated with the faction | faction |  |
+| faction_start_war | The scope faction starts the war agains their target. | faction |  |
+| ordered_faction_county_member | Iterate through all faction county members | faction | landed title |
+| ordered_faction_member | Iterate through all faction character members | faction | character |
+| random_faction_county_member | Iterate through all faction county members | faction | landed title |
+| random_faction_member | Iterate through all faction character members | faction | character |
+| remove_special_character | Removes the special character for the scope faction | faction |  |
+| remove_special_title | Removes the special character for the scope faction | faction |  |
+| set_special_character | Sets the special character for the scope faction | faction | character |
+| set_special_title | Sets the special title for the scope faction | faction | landed title |
+| add_attacker | adds the target character to the scope war as an attacker | war | character |
+| add_defender | adds the target character to the scope war as a defender | war | character |
+| end_war | ends the war with the specified winner, end_war = attacker/defender/white_peace | war |  |
+| every_war_attacker | Iterate through all attackers in the war | war | character |
+| every_war_defender | Iterate through all defenders in the war | war | character |
+| every_war_participant | Iterate through all participants in the war | war | character |
+| ordered_war_attacker | Iterate through all attackers in the war | war | character |
+| ordered_war_defender | Iterate through all defenders in the war | war | character |
+| ordered_war_participant | Iterate through all participants in the war | war | character |
+| random_war_attacker | Iterate through all attackers in the war | war | character |
+| random_war_defender | Iterate through all defenders in the war | war | character |
+| random_war_participant | Iterate through all participants in the war | war | character |
+| remove_participant | removes the target character from the scope war | war | character |
+| set_called_to | sets the target character as already called to the scope war | war | character |
+| set_casus_belli | sets the casus belli of the scope war | war |  |
+| activate_holy_site | Activate an inactive holy site = { activate_holy_site =  } | faith |  |
+| add_doctrine | Add doctrine to faith = { add_doctrine =  } | faith |  |
+| change_fervor | Changes the fervor of the faith by the given value | faith |  |
+| every_defensive_great_holy_wars | Iterate through all great holy wars this faith is defending against | faith | great holy war |
+| every_faith_holy_order | Iterate through all holy orders of the faith | faith | holy order |
+| every_holy_site | Iterate through all holy site baronies of a faith | faith | landed title |
+| ordered_defensive_great_holy_wars | Iterate through all great holy wars this faith is defending against | faith | great holy war |
+| ordered_faith_holy_order | Iterate through all holy orders of the faith | faith | holy order |
+| ordered_holy_site | Iterate through all holy site baronies of a faith | faith | landed title |
+| random_defensive_great_holy_wars | Iterate through all great holy wars this faith is defending against | faith | great holy war |
+| random_faith_holy_order | Iterate through all holy orders of the faith | faith | holy order |
+| random_holy_site | Iterate through all holy site baronies of a faith | faith | landed title |
+| remove_doctrine | Remove doctrine from faith = { remove_doctrine =  } | faith |  |
+| remove_religious_head_title | Removes the religious head title of the faith | faith |  |
+| set_religious_head_title | Sets the religious head title of the faith to the given title. | faith | landed title |
+| start_great_holy_war | Starts a great holy war. | faith |  |
+| set_add_claim_on_loss | if set, any title losses will result in claims being added to the previous holder | title and vassal change |  |
+| set_title_and_vassal_change_type | Sets the type of change. Valid types: conquest, conquest_holy_war, conquest_claim, conquest_populist, inheritance, abdication, destroyed, created, usurped, granted, revoked, election, independency, returned, leased_out, lease_revoked, faction_demand, | title and vassal change |  |
+| add_secret_participant | Adds an participant to the secret | secret | character |
+| disable_exposure_by | Forbids the target character from exposing the secret | secret | character |
+| every_secret_knower | Iterate through all characters who know the secret | secret | character |
+| every_secret_participant | Iterate through participants in a secret | secret | character |
+| expose_secret | Exposes the scope secret | secret | character |
+| ordered_secret_knower | Iterate through all characters who know the secret | secret | character |
+| ordered_secret_participant | Iterate through participants in a secret | secret | character |
+| random_secret_knower | Iterate through all characters who know the secret | secret | character |
+| random_secret_participant | Iterate through participants in a secret | secret | character |
+| remove_secret | Removes the scope secret | secret |  |
+| reveal_to | Reveals the scope secret to the target character | secret | character |
+| set_secret_owner | Sets a new owner for the secret | secret | character |
+| spend_by | Spends the scope secret | secret | character |
+| generate_coa | Generates a coat of arms for the scoped landed title, dynasty or house | landed title, dynasty, dynasty house |  |
+| reset_coa | Rest the coat of arms for the scoped landed title, dynasty or house to its template | landed title, dynasty, dynasty house |  |
+| set_coa | Sets the coat of arms of a landed title, dynasty, or house to the right hand side coat of arms or that of an object of the same type | landed title, dynasty, dynasty house |  |
+| add_building | Add building to the province = { add_building =  } | province |  |
+| add_building_slot | Add building slot to the province | province |  |
+| add_province_modifier | Add a modifier to a province | province |  |
+| add_special_building | Add a special building to the province (will also add/change a special slot if needed) | province |  |
+| add_special_building_slot | Add a special building slot to the province = { add_special_building_slot =  } | province |  |
+| refill_garrison | The scoped province gets its garrison refilled. refill_levy = yes/no | province |  |
+| refill_levy | The scoped province gets its levy refilled | province |  |
+| remove_all_province_modifier_instances | Remove all instances of a modifier from a province | province |  |
+| remove_province_modifier | Remove a modifier from a province | province |  |
+| set_holding_type | Changes the scoped province's holding to another type, removing all buildings that are invalid for the new holding. This might also allow to construct a new holding in an empty province, but it is untested. | province |  |
+| spawn_activity | spawns an activity, spawn_activity = { owner = X type = Y days/months/years = Z }, Z is expiration time can be a value or an inclusive "{A B}" interval from which the value will be picked | province |  |
+| every_leased_title | Iterate through all titles leased to a holy order | holy order | landed title |
+| ordered_leased_title | Iterate through all titles leased to a holy order | holy order | landed title |
+| random_leased_title | Iterate through all titles leased to a holy order | holy order | landed title |
+| accept_invitation_for_character | accept a characters invitation to the activity | activity | character |
+| decline_invitation_for_character | decline a characters invitation to the activity | activity | character |
+| every_activity_declined | Iterate through all characters who declined an activity invite to a specific activity | activity | character |
+| every_activity_invited | Iterate through all characters who have unanswered invites to a specific activity | activity | character |
+| every_participant | Iterate through all participants in an activity | activity | character |
+| invite_character_to_activity | invite a character to the activity | activity | character |
+| ordered_activity_declined | Iterate through all characters who declined an activity invite to a specific activity | activity | character |
+| ordered_activity_invited | Iterate through all characters who have unanswered invites to a specific activity | activity | character |
+| ordered_participant | Iterate through all participants in an activity | activity | character |
+| random_activity_declined | Iterate through all characters who declined an activity invite to a specific activity | activity | character |
+| random_activity_invited | Iterate through all characters who have unanswered invites to a specific activity | activity | character |
+| random_participant | Iterate through all participants in an activity | activity | character |
+| add_from_contribution_attackers | Adds prestige, gold and piety based on contribution to allied attackers. parameters: prestige, gold, piety. | casus belli |  |
+| add_from_contribution_defenders | Adds prestige, gold and piety based on contribution to allied defenders. parameters: prestige, gold, piety. | casus belli |  |
+| every_target_title | Iterate through all casus belli's target titles | casus belli | landed title |
+| ordered_target_title | Iterate through all casus belli's target titles | casus belli | landed title |
+| random_target_title | Iterate through all casus belli's target titles | casus belli | landed title |
+| assign_commander | Assign a commander for the scoped army | army | character |
+| remove_commander | Removes the currently assigned commander from the scoped army | army |  |
+| add_diplomacy_skill | Adds diplomacy skill | none |  |
+| add_focus_progress | Adds focus progress | none |  |
+| add_internal_flag | adds effect to be read internally (no effect in the gamestate) | none |  |
+| add_intrigue_skill | Adds intrigue skill | none |  |
+| add_learning_skill | Adds learning skill | none |  |
+| add_martial_skill | Adds martial skill | none |  |
+| add_prowess_skill | Adds prowess skill | none |  |
+| add_stewardship_skill | Adds stewardship skill | none |  |
+| add_title_law | add law to scoped title, overriding any current law from the same group. DOES NOT apply law change costs and effects. | none |  |
+| add_title_law_effects | Add law to scoped title, overriding any current law from the same group. DOES apply law change costs and effects. | none |  |
+| add_to_global_variable_list | Adds the event target to a variable list. X is the name of the variable. Y is an event target. | none |  |
+| add_to_list | Adds the current scope to an arbitrarily-named list (or creates the list if not already present) to be referenced later in the (unbroken) event chain | none |  |
+| add_to_local_variable_list | Adds the event target to a variable list. X is the name of the variable. Y is an event target. | none |  |
+| add_to_temporary_list | Adds the current scope to an arbitrarily-named list (or creates the list if not already present) to be referenced later in the same effect | none |  |
+| add_to_variable_list | Adds the event target to a variable list. X is the name of the variable. Y is an event target. | none |  |
+| assert_if | Conditionally cause an assert during run time, X is a trigger and Y is an optional string | none |  |
+| assert_read | Conditionally cause an assert during read time | none |  |
+| break_betrothal | Breaks the betrothal between the scope character to the target character | none | character |
+| break_if | conditionally break execution of effects, break_if = { X }, X is a trigger | none |  |
+| change_global_variable | Changes the value or a numeric variable Where X is the name of the numeric variable to modify Where the valid operations are add, subtract, multiply, divide and modulo Y is a fixed point value, script value or event target of a value type | none |  |
+| change_local_variable - Changes the value or a numeric variable Where X is the name of the numeric variable to modify Where the valid operations are add, subtract, multiply, divide and modulo Y is a fixed point value, script value or event target of a value type | change_variable = { name = X operation = Y } |  |  |
+| change_title_holder | Changes Title Holder. holder = 'Character that should get the title' change = 'previously created title_and_vassal_change', adds a title change, will not transfer vassalstake_baronies = yes # Optional; if set, will cause baronies to be taken (rather than vassalized) as well if this title is a countygovernment_base = character # Optional, if the character getting the title was unlanded, their new government will be based on the government of government_base. If no government_base is specified, the government will be based on holder's government. | none |  |
+| change_title_holder_include_vassals | Changes Title Holder. holder = 'Character that should get the title' change = 'previously created title_and_vassal_change', adds a title change, will transfer vassalstake_baronies = yes # Optional; if set, will cause baronies to be taken (rather than vassalized) as well if this title is a countygovernment_base = character # Optional, if the character getting the title was unlanded, their new government will be based on the government of government_base. If no government_base is specified, the government will be based on holder's government. | none |  |
+| change_trait_rank | Changes the trait rank = { trait = trait_group rank = change max = maximum new rank } | none |  |
+| change_variable | Changes the value or a numeric variable Where X is the name of the numeric variable to modify Where the valid operations are add, subtract, multiply, divide and modulo Y is a fixed point value, script value or event target of a value type | none |  |
+| clamp_global_variable | Clamps a variable the specified max and min Where X is the name of the variable Where Y and Z are script values | none |  |
+| clamp_local_variable | Clamps a variable the specified max and min Where X is the name of the variable Where Y and Z are script values | none |  |
+| clamp_variable | Clamps a variable the specified max and min Where X is the name of the variable Where Y and Z are script values | none |  |
+| clear_global_variable_list | Empties the list | none |  |
+| clear_local_variable_list | Empties the list | none |  |
+| clear_saved_scope | Clears a saved scope from the top scope | none |  |
+| clear_variable_list | Empties the list | none |  |
+| close_all_views | Closes all views | none |  |
+| close_view | Tries to close the defined view. Take care to set player if effect is executed not through UI but through synchronized code. Else all the window will open for all players. | none |  |
+| complete_activity | completes the activity, complete_activity = yes ends the activity and runs the on_complete effect, complete_activity = no ends the activity without running the effect | none |  |
+| create_betrothal | Betroth the scope character to the target character, create_betrothal = target (at least one of the characters need to not be adult) | none | character |
+| create_betrothal_matrilineal | Betroth the scope character to the target character matrilineally, create_betrothal_matrilineal = target (at least one of the characters need to not be adult) | none | character |
+| create_character | Creates a character | none |  |
+| create_dynamic_title | Creates a dynamic title. The title will be saved to scope:new_titleusage: | none |  |
+| create_holy_order | Create a new holy order | none |  |
+| create_title_and_vassal_change | starts a title and vassal change and saves it as a temporary event target | none |  |
+| custom_description | Wraps effects that get a custom description instead of the auto-generated one | none |  |
+| custom_description_no_bullet | Wraps effects that get a custom description instead of the auto-generated one. Also ensures no bullet point appears | none |  |
+| custom_label | just a tooltip, the scope as object (for grouping, localization) | none |  |
+| custom_tooltip | just a tooltip, the scope as subject (for grouping, localization) | none |  |
+| debug_log | Log a string to the debug log when this effect executes, debug_log = message, the message can be a localization string with ROOT, SCOPE and PREV available | none |  |
+| debug_log_date | Logs the current date to the debug.log | none |  |
+| debug_log_scopes | Log the current scope to the debug log when this effect executes yes = full scope info, no=only current scope | none |  |
+| divorce | Divorces the scope character from the target character. | none | character |
+| duel | duel effect that selects an effect based on comparing specified skill of a character to a value or another character's skill. Alternatively, the compare value can be scripted completely Where X is the skill to compare, Y is the target character (requires skill to be set) or integer value Z (works with or without the skill), the rest of the effect is the same as random_list If the skill is unspecified, the effect needs a value Z (which can use scripted math) which it will then use as the duel vlue directly If localization = W is specified, the effect localization W will be used (entry in effect_localization database, not a localization key directly) The skill difference (or scripted duel value) is available as scope:duel_value inside the outcome entries, the duel target is accessible as scope:duel_target Valid skill, target, combinations: skill + target, skill + value, only value Since there is now no automatic weighting, we should be using weight numbers in a comparable range to the scope:duel_value value. Since that will always be between -20 and 20 (unless you do something very unusual), and typically in a more narrow range than that, we should stick to those ranges. Only use larger weights if you want the duel_value to have a smaller impact on the weighting, and only use smaller weights if you want the duel_value to have a huge impact on the weighting. In addition, it is fully possible for the compare_modifier to reduce the weight to 0, which would mean that it will not be possible to happen at all. I've requested code support to make it so that we can define min and max values for weights, but until further notice we should use ranges that are guaranteed to not hit 0, or include min values in the compare_modifier itself. Lastly, remember that if you want the outcome of a duel to scale linearly from (almost) 0% to (almost) 100%, the duel_value should be applied 50% to the good outcome, and -50% to the bad outcome. If you only apply it on one side, you will retain a (presumably significant) chunk of chance for the other outcome. | none |  |
+| every_barony | Iterate through all baronies in the game | none | landed title |
+| every_county | Iterate through all counties in the game | none | landed title |
+| every_county_in_region | Iterate through all counties in the region. Put 'region = region_name' inside it | none | landed title |
+| every_duchy | Iterate through all duchies in the game | none | landed title |
+| every_empire | Iterate through all empires in the game | none | landed title |
+| every_in_global_list | Iterate through all items in global list. list = name or variable = name | none |  |
+| every_in_list | Iterate through all items in list. list = name or variable = name | none |  |
+| every_in_local_list | Iterate through all items in local list. list = name or variable = name | none |  |
+| every_independent_ruler | Independent rulers list with a COUNT tier o above | none | character |
+| every_kingdom | Iterate through all kingdoms in the game | none | landed title |
+| every_living_character | Iterate through all living characters | none | character |
+| every_player | Iterate through all player characters | none | character |
+| every_pool_character | Iterate through all characters in the pool of the given province | none | character |
+| every_province | Iterate through all provinces (skips non-land and impassable provinces) | none | province |
+| every_religion_global | Iterate through all religions in the game | none | religion |
+| every_ruler | Rulers list with a COUNT tier o above | none | character |
+| hidden_effect | Effect not shown in tooltips | none |  |
+| multiply_focus_progress | Multiplies focus progress | none |  |
+| open_interaction_window | Tries to open the defined view. | none |  |
+| open_view | Tries to open the defined view without scope data. Take care to set player if effect is executed not through UI but through synchronized code. Else all the window will open for all players. | none |  |
+| open_view_data | Tries to open the defined view with scope data. Take care to set player if effect is executed not through UI but through synchronized code. Else all the window will open for all players. open_view_data = {    view =     view_message =  # optional     player = scope:character # optional, else shows for all players who execute the effect } open_view_data =  for example: scope:faith = { open_view_data = faith_conversion } |  |  |
+| ordered_barony | Iterate through all baronies in the game | none | landed title |
+| ordered_county | Iterate through all counties in the game | none | landed title |
+| ordered_county_in_region | Iterate through all counties in the region. Put 'region = region_name' inside it | none | landed title |
+| ordered_duchy | Iterate through all duchies in the game | none | landed title |
+| ordered_empire | Iterate through all empires in the game | none | landed title |
+| ordered_in_global_list | Iterate through all items in global list. list = name or variable = name | none |  |
+| ordered_in_list | Iterate through all items in list. list = name or variable = name | none |  |
+| ordered_in_local_list | Iterate through all items in local list. list = name or variable = name | none |  |
+| ordered_independent_ruler | Independent rulers list with a COUNT tier o above | none | character |
+| ordered_kingdom | Iterate through all kingdoms in the game | none | landed title |
+| ordered_living_character | Iterate through all living characters | none | character |
+| ordered_player | Iterate through all player characters | none | character |
+| ordered_pool_character | Iterate through all characters in the pool of the given province | none | character |
+| ordered_province | Iterate through all provinces (skips non-land and impassable provinces) | none | province |
+| ordered_religion_global | Iterate through all religions in the game | none | religion |
+| ordered_ruler | Rulers list with a COUNT tier o above | none | character |
+| pan_camera_to_province | Pans the camera to the specified province | none | province |
+| pan_camera_to_title | Pans the camera to the specified title | none | landed title |
+| random | A random effect. X is a chance of the enclosed effects being fired and can be modified by optional value modifier list (AKA MTTH) Y | none |  |
+| random_barony | Iterate through all baronies in the game | none | landed title |
+| random_county | Iterate through all counties in the game | none | landed title |
+| random_county_in_region | Iterate through all counties in the region. Put 'region = region_name' inside it | none | landed title |
+| random_duchy | Iterate through all duchies in the game | none | landed title |
+| random_empire | Iterate through all empires in the game | none | landed title |
+| random_in_global_list | Iterate through all items in global list. list = name or variable = name | none |  |
+| random_in_list | Iterate through all items in list. list = name or variable = name | none |  |
+| random_in_local_list | Iterate through all items in local list. list = name or variable = name | none |  |
+| random_independent_ruler | Independent rulers list with a COUNT tier o above | none | character |
+| random_kingdom | Iterate through all kingdoms in the game | none | landed title |
+| random_list | a random list effect | none |  |
+| random_living_character | Iterate through all living characters | none | character |
+| random_log_scopes | Log the current scope to the random log when this effect executes. Only use temprorarily for debugging purposes as it can introduce localized strings into the random log. yes = full scope info, no=only current scope | none |  |
+| random_player | Iterate through all player characters | none | character |
+| random_pool_character | Iterate through all characters in the pool of the given province | none | character |
+| random_province | Iterate through all provinces (skips non-land and impassable provinces) | none | province |
+| random_religion_global | Iterate through all religions in the game | none | religion |
+| random_ruler | Rulers list with a COUNT tier o above | none | character |
+| remove_from_list | Removes the current scope from a named list remove_from_list = | none |  |
+| remove_global_variable | Removes a variable | none |  |
+| remove_list_global_variable | Removes the target from a variable list Where X is the name of the variable Y is an event target | none |  |
+| remove_list_local_variable | Removes the target from a variable list Where X is the name of the variable Y is an event target | none |  |
+| remove_list_variable | Removes the target from a variable list Where X is the name of the variable Y is an event target | none |  |
+| remove_title_law | remove law from scoped title. This will leave the law group empty, so only do this if you're getting rid of a law group. DOES NOT apply law removal costs and effects. | none |  |
+| remove_variable | Removes a variable. Local or Global | none |  |
+| resolve_title_and_vassal_change | Execute and destory the target title and vassal change, the change cannot be used after calling this effect | none | title and vassal change |
+| clamp_variable | Rounds a variable (global or loval) to the nearest specified value Where X is the name of the variable Y is a script value | none |  |
+| save_scope_as | Saves the current scope as an arbitrarily-named target to be referenced later in the (unbroken) event chain | none |  |
+| save_scope_value_as | Saves a numerical or bool value as an arbitrarily-named target to be referenced later in the (unbroken) event chain | none |  |
+| save_temporary_scope_as | Saves the current scope as an arbitrarily-named temporary target to be referenced later in the same effect | none |  |
+| save_temporary_scope_value_as | Saves a numerical or bool value as an arbitrarily-named temporary target to be referenced later in the same effect | none |  |
+| set_focus_progress | Sets focus progress | none |  |
+| set_generated_asexuality_chance | Sets the chance for a generated character to be asexual | none |  |
+| set_generated_bisexuality_chance | Sets the chance for a generated character to be bisexual | none |  |
+| set_generated_homosexuality_chance | Sets the chance for a generated character to be homosexual | none |  |
+| set_trait_rank | Sets the trait rank = { trait = trait_group rank = new rank } | none |  |
+| set_variable | Sets a variable. Either global or local. Where X is the name of the variable used to then access it Y is any event target, bool, value, script value or flag (flag:W) An optional days where Z is the number of days or script value This variable will be accessible with var:X. With type being in a scope object or in a top scope | none |  |
+| setup_claim_cb | this effect will add a scope:cb_prestige_factor with a value based on what's being taken civil_war = yes # Will vassalize people based on their capital location rather than being fully contained. Won't steal land from people not vassalized | none |  |
+| setup_de_jure_cb | this effect will add a scope:cb_prestige_factor with a value based on what's being taken | none |  |
+| setup_invasion_cb | this effect will add a scope:cb_prestige_factor with a value based on what's being taken | none |  |
+| show_as_tooltip | Effect only shown in tooltips (but not executed) | none |  |
+| start_tutorial_lesson | Starts the tutorial lesson with the given key. Does nothing if the tutorial is not running, the lesson is completed (or already running), or the lesson cannot be triggered (e.g. trigger fails) | none |  |
+| switch | Switch on a trigger for the evaluation of another trigger with an optional fallback trigger. | none |  |
+| trigger_event | triggers an event or on_action | none |  |
+| try_create_important_action | Tries to create an important action notification. Will keep the current one if already exists. | Unspecified | none |
+| try_create_suggestion | Tries to create an suggestuib notification. Will keep the current one if already exists. | Unspecified | none |
+| battle_event | Makes a battle event show up in combat, and the combat result summary. The key is used for loc, with '_friendly' or '_enemy' appended. If this side is not the player's side, the two portraits get flipped | combat side |  |
+| every_side_commander | Iterate through all commanders (the commanders of every army on the side, not just the one leading the battle) | combat side | character |
+| every_side_knight | Iterate through all knights | combat side | character |
+| lose_combat | ends the combat as the losing side (doesn't end the combat if evaluated to false) | combat side |  |
+| ordered_side_commander | Iterate through all commanders (the commanders of every army on the side, not just the one leading the battle) | combat side | character |
+| ordered_side_knight | Iterate through all knights | combat side | character |
+| random_side_commander | Iterate through all commanders (the commanders of every army on the side, not just the one leading the battle) | combat side | character |
+| random_side_knight | Iterate through all knights | combat side | character |
+| win_combat | ends the combat as the winning side (doesn't end the combat if evaluated to false) | combat side |  |
+| change_war_chest_gold | Changes the amount of gold in the war chest by the given amount | great holy war |  |
+| change_war_chest_piety | Changes the amount of piety in the war chest by the given amount | great holy war |  |
+| change_war_chest_prestige | Changes the amount of prestige in the war chest by the given amount | great holy war |  |
+| divide_war_chest | The scoped GHW gives out its war-chest in full or in part. | great holy war |  |
+| do_ghw_title_handout | Hands out titles in the target kingdom to the GHW attacker beneficiaries. | great holy war | title and vassal change |
+| every_pledged_attacker | Iterate through all pledged attackers within a great holy war | great holy war | character |
+| every_pledged_defender | Iterate through all pledged defenders within a great holy war | great holy war | character |
+| ordered_pledged_attacker | Iterate through all pledged attackers within a great holy war | great holy war | character |
+| ordered_pledged_defender | Iterate through all pledged defenders within a great holy war | great holy war | character |
+| pledge_attacker | The target character pledges themselves as an attacker in the GHW. Must be of the same faith as the GHW declarer. pledge_attacker = some character | great holy war | character |
+| pledge_defender | The target character pledges themselves as a defender in the GHW. Must be of the same faith as the GHW target. | great holy war | character |
+| random_pledged_attacker | Iterate through all pledged attackers within a great holy war | great holy war | character |
+| random_pledged_defender | Iterate through all pledged defenders within a great holy war | great holy war | character |
+| reset_designated_winner | The GHW stops having a designated winner | great holy war |  |
+| set_designated_winner | The target character becomes the designated winner of the GHW. | great holy war | character |
+| set_great_holy_war_target | Sets the target of the great holy war. | great holy war |  |
+| set_war_declarer | The target character becomes the character that should declare war instead of the religious head | great holy war | character |
+| start_ghw_war | Starts the GHW war | great holy war |  |
+| unpledge_attacker | The target character removes their pledge as an attacker in the GHW. unpledge_attacker = some character | great holy war | character |
+| unpledge_defender | The target character removes their pledge as a defender in the GHW | great holy war | character |
