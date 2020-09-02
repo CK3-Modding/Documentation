@@ -10,3 +10,7 @@ Mods for Crusader Kings III are stored at `Documents/Paradox Interactive/Crusade
 * Click the `Create` button and a mod folder and `.mod` file will be generated.
 * Go to the mod folder at `Documents/Paradox Interactive/Crusader Kings III/mod/<ModHere>`.
 * You can start making changes to your mod. See [Folder Structure](folder-structure.md).
+
+## Video Tutorial
+
+You can find a video tutorial on how to set up your project [here](https://www.youtube.com/watch?v=94k6h6n7vtY).
