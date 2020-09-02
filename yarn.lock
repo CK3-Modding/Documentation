@@ -1078,6 +1078,8 @@
     vue-template-compiler "^2.6.10"
     vuepress-html-webpack-plugin "^3.2.0"
     vuepress-plugin-container "^2.0.2"
+    vuepress-plugin-clean-urls "^1.1.2"
+    vuepress-plugin-smooth-scroll "^0.0.10" 
     webpack "^4.8.1"
     webpack-chain "^6.0.0"
     webpack-dev-server "^3.5.1"

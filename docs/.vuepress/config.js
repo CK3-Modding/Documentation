@@ -1,5 +1,14 @@
 module.exports = {
-	plugins: [],
+	plugins: [
+		[
+			'vuepress-plugin-clean-urls',
+			{
+			  normalSuffix: '',
+			  indexSuffix: '',
+			  notFoundPath: '/404',
+			},
+		],
+	],
 
 	themeConfig: {
 		sidebar: [
