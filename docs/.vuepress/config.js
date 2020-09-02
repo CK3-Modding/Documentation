@@ -7,7 +7,15 @@ module.exports = {
 				title: 'Fundamentals',
 				children: [
 					'/fundamentals/project-setup',
-					'/fundamentals/folder-structure'
+					'/fundamentals/folder-structure',
+				]
+			},
+			{
+				title: 'Scripting Reference',
+				children: [
+					'/scripting/effects',
+					'/scripting/scopes',
+					'/scripting/triggers',
 				]
 			},
 			{
