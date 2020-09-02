@@ -1,6 +1,10 @@
 name: Page Build
 
-on: push
+on: 
+  push:
+    paths: 
+      - .github/workflows/page.yml
+      - docs/*
 
 jobs:
   build:
