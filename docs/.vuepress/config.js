@@ -27,6 +27,7 @@ module.exports = {
 					'/scripting/effects',
 					'/scripting/scopes',
 					'/scripting/triggers',
+					'/scripting/modifiers',
 				]
 			},
 			{

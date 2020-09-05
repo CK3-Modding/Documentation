@@ -1,0 +1,72 @@
+# Modifiers
+
+## List of Modifiers
+
+| Name | Description |
+| - | - |
+| general_opinion |
+| domain_limit |
+| knight_limit |
+| vassal_limit |
+| tyranny_gain_mult |
+| short_reign_duration_mult |
+| hostile_scheme_resistance_add |
+| fort_level |
+| advantage |
+| levy_size |
+| levy_reinforcement_rate |
+| scheme_discovery_chance_mult |
+| owned_hostile_scheme_success_chance_add |
+| hostile_scheme_power_add |
+| development_growth |
+| build_speed |
+| build_time_modifier |
+| siege_weapon_siege_value_mult |
+| siege_weapon_toughness_add |
+| heavy_cavalry_damage_mult |
+| heavy_cavalry_toughness_mult |
+| light_cavalry_damage_mult |
+| light_cavalry_toughness_mult |
+| light_cavalry_screen_mult |
+| light_cavalry_pursuit_mult |
+| pikemen_damage_mult |
+| pikemen_toughness_mult |
+| heavy_infantry_damage_mult |
+| heavy_infantry_toughness_mult |
+| archers_damage_mult |
+| archers_toughness_mult |
+| skirmishers_screen_mult |
+| skirmishers_damage_mult |
+| skirmishers_toughness_mult |
+| skirmishers_pursuit_mult |
+| light_infantry_damage_mult |
+| light_infantry_toughness_mult |
+| monthly_county_control_change_factor |
+| tech_growth_modifier_culture |
+| tech_growth_modifier_military |
+| combat_rating |
+| disease_defence |
+| supply_limit |
+| manpower_growth |
+| arrest_chance_modifier |
+| plot_power_modifier |
+| tech_growth_modifier_economy |
+| global_revolt_risk |
+| land_morale |
+| fertility |
+| plot_discovery_chance |
+| clan_sentiment |
+| max_manpower_mult |
+| vassal_opinion |
+| tech_growth_modifier |
+| military_techpoints |
+| culture_techpoints |
+| economy_techpoints |
+| global_movement_speed |
+| siege_defence |
+| siege_speed |
+| enemy_hard_casualty_modifier |
+| movement_speed |
+| stress_gain_mult |
+| defender_advantage |
+| hostile_raid_time |

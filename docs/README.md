@@ -15,6 +15,7 @@ If you would like to contribute to the construction of the documentation, click 
 * [Effects](scripting/effects.md)
 * [Scopes](scripting/scopes.md)
 * [Triggers](scripting/triggers.md)
+* [Modifiers](scripting/modifiers.md)
 
 ## Tutorials
 
